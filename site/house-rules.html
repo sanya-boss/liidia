@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Правила проживания — Liidia</title>
+<meta name="description" content="Правила проживания в гостевом доме Liidia в Раннапунгерья: тишина, дети, баня, вода, общие помещения и безопасность.">
+<link rel="icon" type="image/svg+xml" href="assets/liidia-logo10-green.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:116px}
+body{margin:0;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+a,button,[role="button"],summary{-webkit-touch-callout:none;touch-action:manipulation}
+button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
+a{color:#284B3C}
+a:hover{color:#1B3529}
+:focus-visible{outline:2px solid #284B3C;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.65">
+
+<header style="position:{{ hdrPos }};top:0;z-index:40;background:rgba(246,243,236,.96);border-bottom:1px solid #D4D8CE">
+  <div style="padding:12px clamp(20px,4vw,48px);min-height:clamp(68px,8vw,84px);display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:wrap">
+    <a href="{{ homeHref }}" aria-label="Liidia"><img src="assets/liidia-logo11-green.svg" alt="Liidia — resting place" style="display:block;height:clamp(44px,5vw,54px);width:auto"></a>
+    <div style="display:flex;align-items:center;gap:12px;margin-left:auto">
+      <a href="{{ homeHref }}" style="display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 12px;border-radius:8px;color:#222B25;text-decoration:none;font-weight:600;font-size:15px;transition:background-color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">← {{ t.back }}</a>
+      <div style="position:relative">
+        <button type="button" onClick="{{ toggleLang }}" aria-haspopup="true" aria-expanded="{{ langExpanded }}" aria-label="{{ langBtnLabel }}" style="display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid #D4D8CE;border-radius:8px;background:#fff;color:#222B25;cursor:pointer;font:600 14px/1 Manrope,system-ui,sans-serif;letter-spacing:.04em;transition:border-color .18s" style-hover="border-color:#284B3C">
+          <span aria-hidden="true" style="display:block;flex:none;width:22px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(34,43,37,.12);background:#E6EBE2 url({{ langFlag }}) center/cover no-repeat"></span>
+          <span>{{ langCode }}</span>
+          <span aria-hidden="true" style="width:14px;height:14px;background:currentColor;transform:{{ langChevron }};transition:transform .25s cubic-bezier(.2,.7,.2,1);-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-down.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-down.svg) center/contain no-repeat"></span>
+        </button>
+        <div role="menu" aria-label="{{ t.langLabel }}" aria-hidden="{{ langHidden }}" style="position:absolute;right:0;top:calc(100% + 8px);z-index:60;min-width:180px;padding:6px;background:#fff;border:1px solid #D4D8CE;border-radius:10px;box-shadow:0 12px 32px rgba(34,43,37,.14);display:flex;flex-direction:column;gap:2px;opacity:{{ langOpacity }};transform:{{ langShift }};visibility:{{ langVis }};transition:opacity .2s ease,transform .25s cubic-bezier(.2,.7,.2,1),visibility .25s">
+          <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+            <button type="button" role="menuitemradio" aria-checked="{{ l.pressed }}" onClick="{{ l.pick }}" lang="{{ l.code }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:44px;padding:0 12px;border:0;border-radius:6px;cursor:pointer;text-align:left;font:500 15px/1 Manrope,system-ui,sans-serif;background:{{ l.bg }};color:#222B25" style-hover="background:#E6EBE2">
+              <span style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="display:block;flex:none;width:22px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(34,43,37,.12);background:#E6EBE2 url({{ l.flag }}) center/cover no-repeat"></span><span>{{ l.name }}</span></span>
+              <span style="font-size:12px;font-weight:700;letter-spacing:.08em;color:{{ l.fg }}">{{ l.label }}</span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section style="position:relative;isolation:isolate;padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px) clamp(40px,5vw,64px)">
+    <div aria-hidden="true" style="position:absolute;z-index:-1;left:0;right:0;bottom:0;height:clamp(140px,15vw,240px);background:url(assets/liidia-pattern-green-soft.png) repeat-x center bottom/auto 100%;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 80%);mask-image:linear-gradient(to bottom,transparent,#000 80%);pointer-events:none"></div>
+    <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">{{ t.eyebrow }}</p>
+    <h1 style="margin:0 0 24px;max-width:900px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(38px,5.4vw,72px);line-height:1.06;letter-spacing:-.02em;text-wrap:balance">{{ t.title }}</h1>
+    <p style="margin:0;max-width:720px;font-size:clamp(18px,1.3vw,21px);text-wrap:pretty">{{ t.intro }}</p>
+  </section>
+
+  <div style="padding:clamp(32px,5vw,64px) clamp(20px,4vw,48px) clamp(64px,8vw,112px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,96px);align-items:flex-start">
+    <sc-if value="{{ showToc }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="{{ t.toc }}" style="flex:0 1 300px;min-width:0;position:sticky;top:120px">
+        <p style="margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#62685E">{{ t.toc }}</p>
+        <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;border-left:1px solid #D4D8CE">
+          <sc-for list="{{ sections }}" as="s" hint-placeholder-count="11">
+            <li>
+              <a href="{{ s.href }}" aria-current="{{ s.current }}" style="display:flex;gap:12px;padding:8px 12px 8px 16px;margin-left:-1px;border-left:2px solid {{ s.bar }};color:{{ s.tocColor }};font-weight:{{ s.tocWeight }};text-decoration:none;font-size:15px;line-height:1.35;transition:color .25s ease,border-color .25s ease" style-hover="color:#284B3C">
+                <span style="flex:none;width:22px;font-variant-numeric:tabular-nums;color:#9B5139">{{ s.num }}</span><span>{{ s.h }}</span>
+              </a>
+            </li>
+          </sc-for>
+        </ol>
+      </nav>
+    </sc-if>
+
+    <div style="flex:1 1 520px;min-width:0;max-width:820px">
+      <sc-for list="{{ sections }}" as="s" hint-placeholder-count="11">
+        <section id="{{ s.id }}" data-rule="{{ s.id }}" style="padding:0 0 clamp(36px,4vw,48px);margin:0 0 clamp(36px,4vw,48px);border-bottom:1px solid #D4D8CE">
+          <p style="margin:0 0 8px;font-family:Lora,Georgia,serif;font-size:18px;color:#9B5139">{{ s.num }}</p>
+          <h2 style="margin:0 0 20px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(26px,2.6vw,34px);line-height:1.15;letter-spacing:-.01em">{{ s.h }}</h2>
+          <sc-for list="{{ s.paras }}" as="p" hint-placeholder-count="2">
+            <p style="margin:0 0 14px;text-wrap:pretty"><sc-for list="{{ p.segs }}" as="g"><span style="font-weight:{{ g.w }};color:{{ g.c }}">{{ g.t }}</span></sc-for></p>
+          </sc-for>
+          <sc-if value="{{ s.hasSource }}" hint-placeholder-val="{{ false }}">
+            <a href="https://www.riigiteataja.ee/akt/KorS" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600;color:#284B3C;text-decoration:none;transition:color .25s ease" style-hover="color:#1B3529">{{ t.source }}</a>
+          </sc-if>
+        </section>
+      </sc-for>
+
+      <div style="background:#E8DDCE;border-radius:14px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:20px">
+        <h2 style="margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(24px,2.4vw,30px);line-height:1.2">{{ t.helpTitle }}</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="tel:+37258152876" style="display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 24px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:background .2s" style-hover="background:#1B3529;color:#fff">{{ t.callAdmin }} +372 5815 2876</a>
+          <a href="tel:112" style="display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 24px;border-radius:7px;border:1.5px solid #9B5139;color:#7E4029;text-decoration:none;font-weight:700;font-size:16px;transition:background .2s" style-hover="background:#F6F3EC;color:#7E4029">{{ t.emergency }} 112</a>
+        </div>
+      </div>
+      <p style="margin:clamp(32px,4vw,48px) 0 0;font-family:Lora,Georgia,serif;font-style:italic;font-size:clamp(22px,2.2vw,28px);line-height:1.4;color:#284B3C;text-wrap:balance">{{ t.thanks }}</p>
+    </div>
+  </div>
+</main>
+
+
+<footer style="background:#222B25;color:#D4D8CE">
+  <div style="padding:32px clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:14px">
+    <img src="assets/liidia-logo-light.svg" alt="Liidia" style="display:block;height:40px;width:auto">
+    <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
+      <p style="margin:0">© {{ year }} {{ t.footerName }}</p>
+      <p style="margin:0">Designed by <a href="https://sanya-boss.github.io/portfolio/" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;transition:color .25s ease" style-hover="color:#E8DDCE">Mežennõi</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LANGS = [{ code: 'et', label: 'ET', name: 'Eesti', flag: 'https://flagcdn.com/ee.svg' }, { code: 'ru', label: 'RU', name: 'Русский', flag: 'https://flagcdn.com/ru.svg' }, { code: 'en', label: 'EN', name: 'English', flag: 'https://flagcdn.com/gb.svg' }];
+const IDS = ['music', 'kids', 'clean', 'fire', 'sauna', 'water', 'property', 'pets', 'guests', 'checkout', 'contact'];
+
+const RULES = {
+  ru: {
+    docTitle: 'Правила проживания — Liidia', footerName: 'Гостевой дом Liidia', back: 'На главную', langLabel: 'Язык', toc: 'Содержание', eyebrow: 'Гостевой дом Liidia',
+    title: 'Правила проживания',
+    intro: 'Мы хотим, чтобы отдых в Liidia был приятным и комфортным для всех гостей. Просим соблюдать чистоту, бережно относиться к имуществу, уважать окружающих и придерживаться этих правил.',
+    source: 'Текст закона на Riigi Teataja ↗', helpTitle: 'Если что-то случилось', callAdmin: 'Администрация', emergency: 'Экстренная помощь',
+    thanks: 'Спасибо, что помогаете сохранять Liidia уютным и спокойным местом для отдыха!',
+    s: [
+      ['Музыка и тишина', [
+        'Музыку можно слушать на умеренной громкости, если она не мешает другим гостям и соседям. Пожалуйста, избегайте громких басов, криков и лишнего шума. По просьбе администрации убавьте громкость или выключите музыку.',
+        'По § 56 Закона Эстонии об охране правопорядка (Korrakaitseseadus) вне общественных мест запрещён продолжительный или повторяющийся шум, который существенно мешает другим людям, **с 22:00 до 06:00**, а в ночь перед выходным днём — **с 00:00 до 07:00**.',
+        'В эти часы в Liidia действует ночной покой: выключите музыку в колонках и воздержитесь от шумных разговоров и развлечений. В наушниках слушать музыку можно.',
+        'Вечеринки, мероприятия и мощную звуковую аппаратуру нужно заранее согласовать с администрацией. Согласование не отменяет обязанности соблюдать тишину и уважать других гостей и соседей.'
+      ]],
+      ['Присмотр за детьми', [
+        'Родители и сопровождающие взрослые следят за детьми и объясняют им правила безопасного поведения. Особенно внимательно — у реки, в бане и купели, на лестницах, батуте и детской площадке.',
+        'Не оставляйте маленьких детей без присмотра и следите за правилами использования игрового оборудования. Площадка, батут и настольные игры не означают, что гостевой дом присматривает за детьми.'
+      ]],
+      ['Чистота и общие помещения', [
+        'Поддерживайте порядок в комнатах и на территории. Выбрасывайте мусор в предназначенные для этого ёмкости и не оставляйте на земле упаковки, окурки и остатки еды.',
+        'Кухня, обеденный зал, душевые и туалеты — общие. После готовки вымойте посуду, протрите рабочие поверхности и выключите оборудование. Не оставляйте готовку без присмотра и не берите продукты и вещи других гостей без разрешения.',
+        'Пользуйтесь общими помещениями так, чтобы они оставались чистыми и удобными для всех.'
+      ]],
+      ['Курение и пожарная безопасность', [
+        'Курить и пользоваться электронными сигаретами в помещениях запрещено. На территории курите только в согласованных с администрацией местах и выбрасывайте окурки в предназначенные ёмкости.',
+        'Не зажигайте свечи и не разводите открытый огонь вне специально отведённых мест. Пользование грилем согласуйте с администрацией. Не оставляйте огонь и горячие угли без присмотра и не подпускайте к ним детей.',
+        'Запрещается накрывать обогреватели, вмешиваться в работу электрооборудования, отключать датчики дыма и загораживать выходы и проходы.'
+      ]],
+      ['Баня и купель', [
+        'Баню и купель бронируют заранее, они оплачиваются отдельно. Следуйте инструкциям администрации и соблюдайте согласованное время.',
+        'В бане и у купели нельзя пользоваться стеклянной посудой, бегать, толкаться и оставлять детей без присмотра. Не пользуйтесь баней и купелью в состоянии опьянения.',
+        'Не растапливайте печь и не меняйте настройки оборудования без разрешения. Прислушивайтесь к самочувствию: если стало плохо, прекратите процедуру и при необходимости позовите на помощь.'
+      ]],
+      ['У воды и на лодках', [
+        'Будьте осторожны у реки и на воде. Не оставляйте детей у берега без непосредственного присмотра взрослых. Не заходите в воду в состоянии опьянения и не ныряйте в незнакомых местах.',
+        'Аренду лодок согласуйте отдельно. Следуйте инструкциям администрации, надевайте спасательные жилеты и не превышайте вместимость лодки. Не выходите на воду в опасную погоду.'
+      ]],
+      ['Имущество гостевого дома', [
+        'Бережно обращайтесь с мебелью, техникой, посудой, текстилем и другим имуществом. Не выносите вещи из помещений и не переставляйте крупную мебель без согласования.',
+        'О неисправностях, повреждениях и потере ключей сразу сообщайте администрации. Не пытайтесь чинить оборудование самостоятельно.',
+        'Возмещение ущерба решается с учётом обстоятельств и обоснованной стоимости восстановления. Обычный износ ущербом не считается.'
+      ]],
+      ['Домашние животные', [
+        'Приезд с домашними животными согласуйте до бронирования.',
+        'Владельцы следят за питомцами, убирают за ними и не допускают, чтобы животные мешали другим гостям или портили имущество. Не оставляйте животных без присмотра на территории и в общих помещениях.'
+      ]],
+      ['Гости и посетители', [
+        'Количество проживающих должно соответствовать бронированию. Дополнительных гостей и посетителей нужно заранее согласовать с администрацией.',
+        'Не передавайте ключи посторонним. Если вы организуете групповую поездку, познакомьте с правилами всех участников.'
+      ]],
+      ['Личные вещи и выезд', [
+        'Уходя, закрывайте окна и дверь комнаты, выключайте свет и электроприборы. Не оставляйте ценные вещи без присмотра. О найденных или забытых вещах сообщайте администрации.',
+        'Перед отъездом проверьте вещи, вымойте посуду, вынесите мусор и верните ключи. Соблюдайте согласованное время выезда; о продлении проживания договаривайтесь заранее.'
+      ]],
+      ['Обращения и нарушения', [
+        'Если возникла проблема, вы заметили неисправность или опасную ситуацию, позвоните администрации: **+372 5815 2876**. При пожаре, угрозе жизни или другой экстренной ситуации звоните **112**.',
+        'При нарушении правил администрация может попросить прекратить действия, которые мешают другим гостям или создают опасность. Серьёзные или повторные нарушения могут стать основанием для прекращения проживания в соответствии с договором и законом.',
+        'Обязанность гостей соблюдать осторожность не освобождает гостевой дом от его обязанностей по безопасности. Эти правила не ограничивают предусмотренные законом права гостей.'
+      ]]
+    ]
+  },
+  et: {
+    docTitle: 'Kodukord — Liidia', footerName: 'Liidia Puhkemaja', back: 'Avalehele', langLabel: 'Keel', toc: 'Sisukord', eyebrow: 'Liidia Puhkemaja',
+    title: 'Kodukord',
+    intro: 'Soovime, et puhkus Liidias oleks meeldiv ja mugav kõigile külalistele. Palume hoida puhtust, kohelda vara hoolikalt, arvestada teistega ja järgida neid reegleid.',
+    source: 'Seaduse tekst Riigi Teatajas ↗', helpTitle: 'Kui midagi juhtus', callAdmin: 'Administratsioon', emergency: 'Hädaabi',
+    thanks: 'Aitäh, et aitate hoida Liidia hubase ja rahuliku puhkepaigana!',
+    s: [
+      ['Muusika ja öörahu', [
+        'Muusikat võib kuulata mõõduka helitugevusega, kui see ei häiri teisi külalisi ega naabreid. Palume vältida valju bassi, karjumist ja liigset müra. Administratsiooni palvel keerake muusika vaiksemaks või lülitage see välja.',
+        'Korrakaitseseaduse § 56 järgi on väljaspool avalikku kohta keelatud kestev või korduv müra, mis häirib oluliselt teisi inimesi, **kell 22.00–06.00**, puhkepäevale eelneval ööl **kell 00.00–07.00**.',
+        'Nendel tundidel kehtib Liidias öörahu: lülitage kõlaritest muusika välja ja hoiduge valjust jutust ning lõbutsemisest. Kõrvaklappidega võib muusikat kuulata.',
+        'Peod, üritused ja võimsa helitehnika kasutamine tuleb eelnevalt administratsiooniga kokku leppida. Kokkulepe ei vabasta kohustusest hoida öörahu ning arvestada teiste külaliste ja naabritega.'
+      ]],
+      ['Laste järelevalve', [
+        'Vanemad ja saatvad täiskasvanud hoiavad lastel silma peal ja selgitavad neile ohutu käitumise reegleid. Eriti hoolikalt jõe ääres, saunas ja kümblustünnis, treppidel, batuudil ja mänguväljakul.',
+        'Ärge jätke väikelapsi järelevalveta ja jälgige mänguvahendite kasutamise reegleid. Mänguväljak, batuut ja lauamängud ei tähenda, et puhkemaja pakuks lapsehoidu.'
+      ]],
+      ['Puhtus ja ühisruumid', [
+        'Hoidke tubades ja õuealal korda. Visake prügi selleks ettenähtud konteineritesse ning ärge jätke maha pakendeid, suitsukonisid ega toidujäätmeid.',
+        'Köök, söögisaal, dušid ja tualetid on ühiskasutuses. Pärast toiduvalmistamist peske nõud, puhastage tööpinnad ja lülitage seadmed välja. Ärge jätke toiduvalmistamist järelevalveta ega võtke teiste külaliste toitu või asju ilma loata.',
+        'Kasutage ühisruume nii, et need jääksid puhtaks ja mugavaks kõigile.'
+      ]],
+      ['Suitsetamine ja tuleohutus', [
+        'Siseruumides on suitsetamine ja e-sigarettide kasutamine keelatud. Õuealal suitsetage ainult administratsiooniga kokkulepitud kohtades ja visake konid selleks ettenähtud anumasse.',
+        'Ärge süüdake küünlaid ega tehke lahtist tuld väljaspool selleks ettenähtud kohti. Grilli kasutamine leppige kokku administratsiooniga. Ärge jätke tuld ega kuumi süsi järelevalveta ja hoidke lapsed neist eemal.',
+        'Keelatud on katta kütteseadmeid, sekkuda elektriseadmete töösse, lülitada välja suitsuandureid ning tõkestada väljapääse ja käike.'
+      ]],
+      ['Saun ja kümblustünn', [
+        'Sauna ja kümblustünni broneeritakse eelnevalt ning nende eest tasutakse eraldi. Järgige administratsiooni juhiseid ja kokkulepitud aega.',
+        'Saunas ja kümblustünni juures ei tohi kasutada klaasnõusid, joosta, tõugelda ega jätta lapsi järelevalveta. Ärge kasutage sauna ega kümblustünni joobes olekus.',
+        'Ärge kütke ahju ega muutke seadmete seadistusi ilma loata. Arvestage oma enesetundega: halva enesetunde korral lõpetage ja vajadusel kutsuge abi.'
+      ]],
+      ['Vee ääres ja paatidega', [
+        'Olge jõe ääres ja vee peal ettevaatlik. Ärge jätke lapsi kaldale ilma täiskasvanu vahetu järelevalveta. Ärge minge vette joobes olekus ega hüpake vette tundmatus kohas.',
+        'Paadirent lepitakse kokku eraldi. Järgige administratsiooni juhiseid, kandke päästevesti ja ärge ületage paadi lubatud mahutavust. Ärge minge veele ohtliku ilmaga.'
+      ]],
+      ['Puhkemaja vara', [
+        'Käsitsege mööblit, tehnikat, nõusid, tekstiili ja muud vara hoolikalt. Ärge viige asju ruumidest välja ega tõstke suurt mööblit ümber ilma kokkuleppeta.',
+        'Riketest, kahjustustest ja võtme kaotamisest teatage kohe administratsioonile. Ärge proovige seadmeid ise parandada.',
+        'Kahju hüvitamine lahendatakse, arvestades asjaolusid ja põhjendatud taastamiskulu. Tavapärane kulumine ei ole kahju.'
+      ]],
+      ['Lemmikloomad', [
+        'Lemmiklooma kaasavõtmine tuleb kokku leppida enne broneerimist.',
+        'Omanik hoiab lemmikloomal silma peal, koristab tema järelt ega luba tal häirida teisi külalisi või kahjustada vara. Ärge jätke loomi järelevalveta õuealale ega ühisruumidesse.'
+      ]],
+      ['Külalised ja külastajad', [
+        'Majutatavate arv peab vastama broneeringule. Lisakülalised ja külastajad tuleb eelnevalt administratsiooniga kokku leppida.',
+        'Ärge andke võtmeid kõrvalistele isikutele. Grupireisi korraldades tutvustage kodukorda kõigile osalejatele.'
+      ]],
+      ['Isiklikud asjad ja lahkumine', [
+        'Lahkudes sulgege toa aknad ja uks ning lülitage välja tuled ja elektriseadmed. Ärge jätke väärisesemeid järelevalveta. Leitud või unustatud asjadest teatage administratsioonile.',
+        'Enne ärasõitu kontrollige oma asjad üle, peske nõud, viige prügi ära ja tagastage võtmed. Pidage kinni kokkulepitud lahkumisajast; majutuse pikendamine leppige kokku aegsasti.'
+      ]],
+      ['Pöördumised ja rikkumised', [
+        'Kui tekkis probleem või märkasite riket või ohtlikku olukorda, helistage administratsioonile: **+372 5815 2876**. Tulekahju, eluohu või muu hädaolukorra korral helistage **112**.',
+        'Reeglite rikkumise korral võib administratsioon paluda lõpetada tegevuse, mis häirib teisi külalisi või tekitab ohtu. Tõsine või korduv rikkumine võib olla aluseks majutuse lõpetamisele kooskõlas lepingu ja seadusega.',
+        'Külaliste kohustus olla ettevaatlik ei vabasta puhkemaja tema ohutuskohustustest. Käesolev kodukord ei piira külaliste seadusest tulenevaid õigusi.'
+      ]]
+    ]
+  },
+  en: {
+    docTitle: 'House rules — Liidia', footerName: 'Liidia Guest House', back: 'Back to home', langLabel: 'Language', toc: 'Contents', eyebrow: 'Liidia guest house',
+    title: 'House rules',
+    intro: 'We want your stay at Liidia to be pleasant and comfortable for every guest. Please keep things clean, treat the property with care, be considerate of others and follow these rules.',
+    source: 'Read the law on Riigi Teataja ↗', helpTitle: 'If something happens', callAdmin: 'Staff', emergency: 'Emergency',
+    thanks: 'Thank you for helping keep Liidia a cosy, peaceful place to unwind!',
+    s: [
+      ['Music and quiet hours', [
+        'Music is welcome at a moderate volume as long as it doesn’t disturb other guests or neighbours. Please avoid loud bass, shouting and excessive noise. If staff ask, turn the volume down or switch the music off.',
+        'Under § 56 of the Estonian Law Enforcement Act (Korrakaitseseadus), prolonged or repeated noise outside public places that significantly disturbs others is prohibited **from 22:00 to 06:00**, and on the night before a day off **from 00:00 to 07:00**.',
+        'During these hours quiet time applies at Liidia: switch off music on speakers and avoid loud conversations or entertainment. Headphones are fine.',
+        'Parties, events and powerful sound equipment must be agreed with the staff in advance. Approval doesn’t remove the duty to respect quiet hours, other guests and neighbours.'
+      ]],
+      ['Supervising children', [
+        'Parents and accompanying adults keep an eye on children and explain safe behaviour to them — especially by the river, in the sauna and hot tub, on stairs, the trampoline and the playground.',
+        'Don’t leave young children unattended, and make sure play equipment is used according to its rules. The playground, trampoline and board games don’t mean the guest house provides childcare.'
+      ]],
+      ['Cleanliness and shared spaces', [
+        'Keep your room and the grounds tidy. Put rubbish in the bins provided and don’t leave packaging, cigarette butts or food scraps on the ground.',
+        'The kitchen, dining hall, showers and toilets are shared. After cooking, wash up, wipe the surfaces and switch off appliances. Don’t leave cooking unattended or take other guests’ food or belongings without permission.',
+        'Please use the shared spaces so they stay clean and comfortable for everyone.'
+      ]],
+      ['Smoking and fire safety', [
+        'Smoking and e-cigarettes are not allowed indoors. Outdoors, smoke only where agreed with the staff and use the containers provided for butts.',
+        'Don’t light candles or make open fires outside designated areas. Agree barbecue use with the staff. Never leave fire or hot coals unattended, and keep children away from them.',
+        'Don’t cover heaters, tamper with electrical equipment, disable smoke detectors or block exits and walkways.'
+      ]],
+      ['Sauna and hot tub', [
+        'The sauna and hot tub are booked in advance and paid separately. Follow the staff’s instructions and keep to your booked time.',
+        'In the sauna and around the hot tub, no glassware, running, pushing or leaving children unattended. Don’t use the sauna or hot tub while intoxicated.',
+        'Don’t light the stove or change equipment settings without permission. Listen to your body: if you feel unwell, stop and get help if needed.'
+      ]],
+      ['By the water and boats', [
+        'Take care by the river and on the water. Don’t leave children on the bank without direct adult supervision. Don’t go into the water while intoxicated or dive in unfamiliar spots.',
+        'Boat rental is arranged separately. Follow the staff’s instructions, wear life jackets and don’t exceed the boat’s capacity. Don’t go out on the water in dangerous weather.'
+      ]],
+      ['Guest house property', [
+        'Treat furniture, appliances, dishes, textiles and other property with care. Don’t take items out of the rooms or move large furniture without agreement.',
+        'Report faults, damage or lost keys to the staff straight away. Please don’t try to repair equipment yourself.',
+        'Compensation for damage is settled based on the circumstances and reasonable repair costs. Normal wear and tear is not damage.'
+      ]],
+      ['Pets', [
+        'Bringing a pet must be agreed before booking.',
+        'Owners supervise their pets, clean up after them and make sure they don’t disturb other guests or damage property. Don’t leave animals unattended on the grounds or in shared spaces.'
+      ]],
+      ['Guests and visitors', [
+        'The number of guests must match the booking. Extra guests and visitors must be agreed with the staff in advance.',
+        'Don’t give keys to anyone else. If you’re organising a group trip, make sure everyone knows the house rules.'
+      ]],
+      ['Belongings and check-out', [
+        'When you go out, close your room’s windows and door and switch off lights and appliances. Don’t leave valuables unattended. Report found or forgotten items to the staff.',
+        'Before leaving, check your belongings, wash the dishes, take out the rubbish and return the keys. Keep to the agreed check-out time, and ask in advance if you’d like to extend your stay.'
+      ]],
+      ['Questions and violations', [
+        'If you have a problem or notice a fault or a dangerous situation, call the staff: **+372 5815 2876**. In case of fire, danger to life or another emergency, call **112**.',
+        'If the rules are broken, the staff may ask you to stop any activity that disturbs other guests or creates danger. Serious or repeated violations may end your stay in accordance with the agreement and the law.',
+        'Guests’ duty of care doesn’t release the guest house from its own safety obligations. These rules don’t limit guests’ statutory rights.'
+      ]]
+    ]
+  }
+};
+
+const segs = (str) => str.split('**').map((t, i) => ({ t, w: i % 2 ? 700 : 400, c: i % 2 ? '#222B25' : '#3A4237' })).filter((g) => g.t);
+
+class Component extends DCLogic {
+  state = {
+    lang: (() => { try { const q = new URLSearchParams(location.search).get('lang'); if (RULES[q]) return q; const v = localStorage.getItem('liidia-lang'); return RULES[v] ? v : 'et'; } catch (e) { return 'et'; } })(),
+    w: typeof window !== 'undefined' ? window.innerWidth : 1280,
+    active: IDS[0]
+  };
+  componentDidMount() {
+    this.onKey = (e) => { if (e.key === 'Escape') this.setState({ langOpen: false }); };
+    this.onDown = (e) => { if (this.state.langOpen && !e.target.closest('[aria-haspopup]') && !e.target.closest('[role="menu"]')) this.setState({ langOpen: false }); };
+    window.addEventListener('keydown', this.onKey);
+    document.addEventListener('pointerdown', this.onDown);
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    this.io = new IntersectionObserver((en) => {
+      en.forEach((x) => { if (x.isIntersecting) this.setState({ active: x.target.getAttribute('data-rule') }); });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    setTimeout(() => document.querySelectorAll('[data-rule]').forEach((el) => this.io.observe(el)), 50);
+    this.syncDoc();
+  }
+  componentDidUpdate() { this.syncDoc(); }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); document.removeEventListener('pointerdown', this.onDown); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
+  syncDoc() { document.documentElement.lang = this.state.lang; document.title = RULES[this.state.lang].docTitle; }
+  setLang = (code) => () => {
+    try { localStorage.setItem('liidia-lang', code); } catch (e) {}
+    try { const u = new URL(location.href); u.searchParams.set('lang', code); history.replaceState(history.state, '', u.toString()); } catch (e) {}
+    this.setState({ lang: code, langOpen: false });
+  };
+  renderVals() {
+    const s = this.state;
+    const T = RULES[s.lang];
+    return {
+      t: T,
+      homeHref: './?lang=' + s.lang,
+      showToc: s.w >= 960, hdrPos: s.w >= 960 ? 'sticky' : 'relative',
+      year: new Date().getFullYear(),
+      langs: LANGS.map((l) => ({ ...l, pressed: l.code === s.lang ? 'true' : 'false', bg: l.code === s.lang ? '#F6F3EC' : 'transparent', fg: l.code === s.lang ? '#284B3C' : '#62685E', pick: this.setLang(l.code) })),
+      toggleLang: () => this.setState({ langOpen: !s.langOpen }), langCode: s.lang.toUpperCase(), langFlag: (LANGS.find((l) => l.code === s.lang) || LANGS[0]).flag, langBtnLabel: (LANGS.find((l) => l.code === s.lang) || LANGS[0]).name,
+      langExpanded: s.langOpen ? 'true' : 'false', langHidden: s.langOpen ? 'false' : 'true', langVis: s.langOpen ? 'visible' : 'hidden', langOpacity: s.langOpen ? 1 : 0, langShift: s.langOpen ? 'none' : 'translateY(-6px)', langChevron: s.langOpen ? 'rotate(180deg)' : 'none',
+      sections: T.s.map(([h, paras], i) => {
+        const id = IDS[i];
+        const on = s.active === id;
+        return {
+          id, h, href: '#' + id, num: String(i + 1).padStart(2, '0'),
+          paras: paras.map((p) => ({ segs: segs(p) })),
+          hasSource: id === 'music',
+          current: on ? 'true' : 'false', bar: on ? '#284B3C' : 'transparent', tocColor: on ? '#284B3C' : '#3A4237', tocWeight: on ? 600 : 500
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

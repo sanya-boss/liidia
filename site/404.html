@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>404 — Liidia</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="assets/liidia-logo10-green.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+a,button,[role="button"],summary{-webkit-touch-callout:none;touch-action:manipulation}
+button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
+a{color:#284B3C}
+a:hover{color:#1B3529}
+:focus-visible{outline:2px solid #284B3C;outline-offset:3px}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;background:#F6F3EC">
+  <header style="padding:24px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:16px">
+    <a href="./" aria-label="Liidia"><img src="assets/liidia-logo11-green.svg" alt="Liidia — resting place" style="display:block;height:48px;width:auto"></a>
+    <div role="group" aria-label="Language" style="display:flex;gap:2px;padding:3px;border:1px solid #D4D8CE;border-radius:8px;background:#fff">
+      <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+        <button type="button" onClick="{{ l.pick }}" aria-pressed="{{ l.pressed }}" lang="{{ l.code }}" style="min-width:40px;height:38px;padding:0 8px;border:0;border-radius:5px;cursor:pointer;font:600 13px/1 Manrope,system-ui,sans-serif;letter-spacing:.06em;background:{{ l.bg }};color:{{ l.fg }}">{{ l.label }}</button>
+      </sc-for>
+    </div>
+  </header>
+  <main style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:clamp(32px,6vw,80px) clamp(20px,4vw,48px)">
+    <p style="margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(120px,22vw,280px);line-height:.85;letter-spacing:-.05em;color:#284B3C">404</p>
+    <h1 style="margin:24px 0 12px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">{{ t.title }}</h1>
+    <p style="margin:0 auto 32px;max-width:520px;font-size:17px;line-height:1.6;text-wrap:pretty">{{ t.text }}</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 24px">
+      <a href="./" style="display:inline-flex;align-items:center;height:54px;padding:0 26px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px" style-hover="background:#1B3529;color:#fff">{{ t.home }}</a>
+      <a href="tel:+37258152876" style="display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:16px;text-underline-offset:5px">{{ t.call }}&nbsp;+372 5815 2876</a>
+    </div>
+  </main>
+  <div aria-hidden="true" style="height:clamp(110px,11vw,170px);background:#F6F3EC url(assets/liidia-pattern-green.png) repeat-x center/auto 100%"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const COPY = {
+  ru: { title: 'Такой страницы нет', text: 'Возможно, ссылка устарела или в адресе опечатка. Вернитесь на главную — там всё о гостевом доме Liidia.', home: 'На главную', call: 'Позвонить' },
+  et: { title: 'Sellist lehte ei ole', text: 'Link võib olla aegunud või aadressis on viga. Minge avalehele — seal on kõik Liidia Puhkemajast.', home: 'Avalehele', call: 'Helista' },
+  en: { title: 'This page doesn’t exist', text: 'The link may be out of date or the address mistyped. Head back to the home page for everything about Liidia guest house.', home: 'Back to home', call: 'Call' }
+};
+const LANGS = [{ code: 'et', label: 'ET' }, { code: 'ru', label: 'RU' }, { code: 'en', label: 'EN' }];
+class Component extends DCLogic {
+  state = { lang: (() => { try { const v = localStorage.getItem('liidia-lang'); return COPY[v] ? v : 'et'; } catch (e) { return 'et'; } })() };
+  componentDidMount() { document.documentElement.lang = this.state.lang; }
+  componentDidUpdate() { document.documentElement.lang = this.state.lang; }
+  renderVals() {
+    const lang = this.state.lang;
+    return {
+      t: COPY[lang],
+      langs: LANGS.map((l) => ({ ...l, pressed: l.code === lang ? 'true' : 'false', bg: l.code === lang ? '#284B3C' : 'transparent', fg: l.code === lang ? '#fff' : '#222B25',
+        pick: () => { try { localStorage.setItem('liidia-lang', l.code); } catch (e) {} this.setState({ lang: l.code }); } }))
+    };
+  }
+}
+</script>
+</body>
+</html>
