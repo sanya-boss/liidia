@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/svg+xml" href="assets/liidia-logo10-green.svg">
+<title>Гостевой дом Liidia — отдых в Раннапунгерья</title>
+<meta name="description" content="Гостевой дом Liidia на берегу реки Раннапунгерья: размещение от 55 € за ночь, баня с купелью и отдых для компаний. Пляж Каукси — в 4 км.">
+<meta property="og:title" content="Liidia — ваши выходные у реки">
+<meta property="og:image" content="assets/liidia-hero.webp">
+<link rel="alternate" hreflang="et" href="?lang=et">
+<link rel="alternate" hreflang="ru" href="?lang=ru">
+<link rel="alternate" hreflang="en" href="?lang=en">
+<link rel="alternate" hreflang="x-default" href="?lang=et">
+<script type="application/ld+json">{ "@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Liidia", "description": "Guest house on the Rannapungerja river near Lake Peipus. Rooms for 2–4 guests, up to 40 beds, sauna with hot tub.", "telephone": "+372 5815 2876", "priceRange": "55–85 €", "image": "assets/liidia-hero.webp", "address": { "@type": "PostalAddress", "addressLocality": "Rannapungerja", "postalCode": "42208", "addressRegion": "Ida-Virumaa", "addressCountry": "EE" }, "amenityFeature": [ { "@type": "LocationFeatureSpecification", "name": "Sauna", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Shared kitchen", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Barbecue area", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Playground", "value": true } ] }</script>
+<meta property="og:description" content="Гостевой дом в Раннапунгерья: отдых на природе, размещение для семей и компаний, баня и купель.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+a,button,[role="button"],summary{-webkit-touch-callout:none;touch-action:manipulation}
+button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
+a{color:#284B3C}
+a:hover{color:#1B3529}
+:focus-visible{outline:2px solid #284B3C;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip">
+
+<a href="#about" style="position:absolute;left:16px;top:-80px;z-index:200;padding:12px 18px;border-radius:7px;background:#284B3C;color:#fff;font-weight:600;text-decoration:none;transition:top .2s" style-focus="top:16px;color:#fff">Перейти к содержанию</a>
+
+<header style="position:sticky;top:0;z-index:40;background:rgba(246,243,236,.96);border-bottom:1px solid #D4D8CE">
+  <div style="width:100%;padding:0 clamp(20px,4vw,48px);height:clamp(68px,8vw,84px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#top" aria-label="Liidia — наверх" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#222B25">
+      <img src="assets/liidia-logo11-green.svg" alt="Liidia — resting place" style="display:block;height:clamp(44px,5vw,54px);width:auto">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Разделы" style="display:flex;gap:4px;font-size:15px;font-weight:500">
+        <a href="#about" style="display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:8px;color:#222B25;text-decoration:none;background:rgba(40,75,60,0);transition:background-color .3s ease,color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">О доме</a>
+        <a href="#rooms" style="display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:8px;color:#222B25;text-decoration:none;background:rgba(40,75,60,0);transition:background-color .3s ease,color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">Размещение</a>
+        <a href="#sauna" style="display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:8px;color:#222B25;text-decoration:none;background:rgba(40,75,60,0);transition:background-color .3s ease,color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">Баня</a>
+        <a href="#gallery" style="display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:8px;color:#222B25;text-decoration:none;background:rgba(40,75,60,0);transition:background-color .3s ease,color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">Галерея</a>
+        <a href="#contacts" style="display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:8px;color:#222B25;text-decoration:none;background:rgba(40,75,60,0);transition:background-color .3s ease,color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">Контакты</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:24px">
+        <div ref="{{ langRef }}" style="position:relative">
+          <button type="button" onClick="{{ toggleLang }}" aria-haspopup="true" aria-expanded="{{ langExpanded }}" aria-label="{{ langBtnLabel }}" style="display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid #D4D8CE;border-radius:8px;background:#fff;color:#222B25;cursor:pointer;font:600 14px/1 Manrope,system-ui,sans-serif;letter-spacing:.04em;transition:border-color .18s" style-hover="border-color:#284B3C">
+            <span aria-hidden="true" style="display:block;flex:none;width:22px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(34,43,37,.12);background:#E6EBE2 url({{ langFlag }}) center/cover no-repeat"></span>
+            <span>{{ langCode }}</span>
+            <span aria-hidden="true" style="width:14px;height:14px;background:currentColor;transform:{{ langChevron }};transition:transform .25s cubic-bezier(.2,.7,.2,1);-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-down.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-down.svg) center/contain no-repeat"></span>
+          </button>
+          <div role="menu" aria-label="Язык" aria-hidden="{{ langHidden }}" style="position:absolute;right:0;top:calc(100% + 8px);z-index:60;min-width:180px;padding:6px;background:#fff;border:1px solid #D4D8CE;border-radius:10px;box-shadow:0 12px 32px rgba(34,43,37,.14);display:flex;flex-direction:column;gap:2px;opacity:{{ langOpacity }};transform:{{ langShift }};visibility:{{ langVis }};transition:opacity .2s ease,transform .25s cubic-bezier(.2,.7,.2,1),visibility .25s">
+            <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+              <button type="button" role="menuitemradio" aria-checked="{{ l.pressed }}" onClick="{{ l.pick }}" lang="{{ l.code }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:44px;padding:0 12px;border:0;border-radius:6px;cursor:pointer;text-align:left;font:500 15px/1 Manrope,system-ui,sans-serif;background:{{ l.bg }};color:#222B25" style-hover="background:#E6EBE2">
+                <span style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="display:block;flex:none;width:22px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(34,43,37,.12);background:#E6EBE2 url({{ l.flag }}) center/cover no-repeat"></span><span>{{ l.name }}</span></span>
+                <span style="font-size:12px;font-weight:700;letter-spacing:.08em;color:{{ l.fg }}">{{ l.label }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+        <a href="tel:+37258152876" style="color:#222B25;text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap">+372 5815 2876</a>
+        <div aria-hidden="{{ hdrCtaHidden }}" inert="{{ hdrCtaInert }}" style="display:grid;grid-template-columns:{{ hdrCtaMax }};margin-left:{{ hdrCtaMl }};transition:grid-template-columns .6s ease-in-out,margin-left .6s ease-in-out">
+        <div style="min-width:0;overflow:hidden;display:flex">
+        <a href="#contacts" onClick="{{ pickNone }}" style="display:inline-flex;align-items:center;flex:none;white-space:nowrap;height:48px;padding:0 22px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:15px;opacity:{{ hdrCtaOpacity }};transform:{{ hdrCtaShift }};transition:background .18s,opacity .6s ease-in-out,transform .6s ease-in-out" style-hover="background:#1B3529;color:#fff">Уточнить даты</a>
+        </div>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:10px">
+      <div ref="{{ langRef }}" style="position:relative">
+          <button type="button" onClick="{{ toggleLang }}" aria-haspopup="true" aria-expanded="{{ langExpanded }}" aria-label="{{ langBtnLabel }}" style="display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid #D4D8CE;border-radius:8px;background:#fff;color:#222B25;cursor:pointer;font:600 14px/1 Manrope,system-ui,sans-serif;letter-spacing:.04em;transition:border-color .18s" style-hover="border-color:#284B3C">
+            <span aria-hidden="true" style="display:block;flex:none;width:22px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(34,43,37,.12);background:#E6EBE2 url({{ langFlag }}) center/cover no-repeat"></span>
+            <span>{{ langCode }}</span>
+            <span aria-hidden="true" style="width:14px;height:14px;background:currentColor;transform:{{ langChevron }};transition:transform .25s cubic-bezier(.2,.7,.2,1);-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-down.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-down.svg) center/contain no-repeat"></span>
+          </button>
+          <div role="menu" aria-label="Язык" aria-hidden="{{ langHidden }}" style="position:absolute;right:0;top:calc(100% + 8px);z-index:60;min-width:180px;padding:6px;background:#fff;border:1px solid #D4D8CE;border-radius:10px;box-shadow:0 12px 32px rgba(34,43,37,.14);display:flex;flex-direction:column;gap:2px;opacity:{{ langOpacity }};transform:{{ langShift }};visibility:{{ langVis }};transition:opacity .2s ease,transform .25s cubic-bezier(.2,.7,.2,1),visibility .25s">
+            <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+              <button type="button" role="menuitemradio" aria-checked="{{ l.pressed }}" onClick="{{ l.pick }}" lang="{{ l.code }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:44px;padding:0 12px;border:0;border-radius:6px;cursor:pointer;text-align:left;font:500 15px/1 Manrope,system-ui,sans-serif;background:{{ l.bg }};color:#222B25" style-hover="background:#E6EBE2">
+                <span style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="display:block;flex:none;width:22px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(34,43,37,.12);background:#E6EBE2 url({{ l.flag }}) center/cover no-repeat"></span><span>{{ l.name }}</span></span>
+                <span style="font-size:12px;font-weight:700;letter-spacing:.08em;color:{{ l.fg }}">{{ l.label }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-controls="mobile-menu" aria-label="{{ menuLabel }}" style="width:48px;height:48px;display:grid;place-items:center;border:1px solid #284B3C;border-radius:7px;background:#284B3C;color:#fff;cursor:pointer;padding:0" style-hover="background:#1B3529">
+        <span style="width:20px;height:20px;background:currentColor;-webkit-mask:url({{ menuIcon }}) center/contain no-repeat;mask:url({{ menuIcon }}) center/contain no-repeat"></span>
+      </button>
+      </div>
+    </sc-if>
+  </div>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div aria-hidden="{{ menuHidden }}" inert="{{ menuInert }}" style="display:grid;grid-template-rows:{{ menuRows }};visibility:{{ menuVis }};transition:grid-template-rows .38s cubic-bezier(.2,.7,.2,1),visibility .38s">
+    <div style="overflow:hidden;min-height:0">
+    <nav id="mobile-menu" aria-label="Разделы" style="border-top:1px solid #D4D8CE;background:#F6F3EC;padding:8px 20px 24px;display:flex;flex-direction:column;opacity:{{ menuOpacity }};transform:{{ menuShift }};transition:opacity .3s ease,transform .38s cubic-bezier(.2,.7,.2,1)">
+      <a href="#about" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-family:Lora,Georgia,serif;font-size:22px">О доме</a>
+      <a href="#rooms" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-family:Lora,Georgia,serif;font-size:22px">Размещение</a>
+      <a href="#sauna" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-family:Lora,Georgia,serif;font-size:22px">Баня</a>
+      <a href="#gallery" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-family:Lora,Georgia,serif;font-size:22px">Галерея</a>
+      <a href="#contacts" onClick="{{ closeMenu }}" style="padding:14px 0;color:#222B25;text-decoration:none;font-family:Lora,Georgia,serif;font-size:22px">Контакты</a>
+      <a href="tel:+37258152876" style="margin-top:16px;display:flex;align-items:center;justify-content:center;height:52px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600">Позвонить · +372 5815 2876</a>
+    </nav>
+    </div>
+    </div>
+  </sc-if>
+</header>
+
+<main id="top">
+
+<section aria-labelledby="hero-title" style="width:100%;padding:clamp(40px,6vw,72px) clamp(20px,4vw,48px) 0">
+  <div style="position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(24px,4vw,64px);align-items:end">
+    <div aria-hidden="true" style="display:{{ heroPatDesk }};position:absolute;z-index:-1;top:28px;height:clamp(110px,11vw,170px);left:calc(-1 * clamp(20px,4vw,48px));right:calc(-1 * clamp(20px,4vw,48px));pointer-events:none"></div>
+    <div style="min-width:0">
+      <p style="margin:0 0 20px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">Раннапунгерья · Эстония</p>
+      <h1 id="hero-title" style="position:relative;isolation:isolate;margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(42px,6.4vw,86px);line-height:1.04;letter-spacing:-.02em;text-wrap:balance"><span aria-hidden="true" style="display:{{ heroPatMob }};position:absolute;z-index:-1;top:calc(50% - 60px);height:120px;left:calc(-1 * clamp(20px,4vw,48px));right:calc(-1 * clamp(20px,4vw,48px));pointer-events:none"><span style="display:block;width:100%;height:100%;background:url(assets/liidia-pattern-green.png) repeat-x center/auto 100%;opacity:.07"></span></span>Ваши выходные <span style="font-style:italic;color:#284B3C">в&nbsp;гостевом доме Liidia</span></h1>
+    </div>
+    <div style="min-width:0;width:100%;max-width:clamp(480px,38vw,680px);padding-bottom:8px;justify-self:end">
+      <p style="margin:0 0 28px;font-size:clamp(18px,1.3vw,21px);line-height:1.6;color:#222B25;text-wrap:pretty">Отдых на берегу реки Раннапунгерья, рядом с Чудским озером. Приезжайте вдвоём, с семьёй или компанией — гулять, рыбачить и проводить время вместе.</p>
+      <div ref="{{ heroCtaRef }}" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+        <a href="#contacts" onClick="{{ pickNone }}" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:background .18s" style-hover="background:#1B3529;color:#fff">Уточнить свободные даты</a>
+        <a href="#rooms" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#284B3C;font-weight:600;font-size:16px;text-underline-offset:5px">Посмотреть размещение</a>
+      </div>
+      <p style="margin:20px 0 0;font-size:15px;color:#62685E">Размещение от <strong style="color:#222B25;font-weight:700">55&nbsp;€</strong> за&nbsp;ночь</p>
+    </div>
+  </div>
+  <figure style="margin:clamp(32px,4vw,48px) 0 0">
+    <div style="position:relative;width:100%;aspect-ratio:16/8;min-height:260px;max-height:clamp(320px,40vw,620px);border-radius:12px;overflow:hidden;background:#E8DDCE">
+      <image-slot id="liidia-hero" shape="rounded" radius="12" src="assets/liidia-hero.webp" placeholder="Гостевой дом Liidia с высоты"></image-slot>
+    </div>
+    <figcaption style="margin-top:12px;font-size:14px;color:#62685E">Гостевой дом Liidia · Раннапунгерья</figcaption>
+  </figure>
+</section>
+
+<section aria-label="Коротко о главном" style="width:100%;padding:clamp(32px,4vw,48px) clamp(20px,4vw,48px) 0">
+  <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));border-top:1px solid #D4D8CE;border-bottom:1px solid #D4D8CE">
+    <div style="padding:24px 24px 24px 0;border-right:1px solid #D4D8CE">
+      <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">На берегу реки</dt>
+      <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Раннапунгерья</dd>
+    </div>
+    <div style="padding:24px;border-right:1px solid #D4D8CE">
+      <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">4&nbsp;км до&nbsp;пляжа</dt>
+      <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Пляж Каукси</dd>
+    </div>
+    <div style="padding:24px;border-right:1px solid #D4D8CE">
+      <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">От 55&nbsp;€ / ночь</dt>
+      <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Размещение на двоих</dd>
+    </div>
+    <div style="padding:24px">
+      <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">До 40 спальных мест</dt>
+      <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Для семей и компаний</dd>
+    </div>
+  </dl>
+</section>
+
+<section id="about" aria-labelledby="about-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,96px);align-items:center">
+    <div style="flex:1 1 400px;min-width:0;position:relative;aspect-ratio:4/3;max-height:clamp(340px,38vw,560px);border-radius:12px;overflow:hidden;background:#E8DDCE">
+      <image-slot id="liidia-about" src="assets/slots/liidia-about.webp" shape="rounded" radius="12" placeholder="Река Раннапунгерья у домов"></image-slot>
+    </div>
+    <div style="flex:0 1 clamp(480px,38vw,680px);margin-left:auto;min-width:0;">
+      <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">О Liidia</p>
+      <h2 id="about-title" style="margin:0 0 28px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">Место, где можно никуда не спешить</h2>
+      <p style="margin:0 0 16px;text-wrap:pretty">Liidia — гостевой дом на берегу реки Раннапунгерья. Здесь можно устроить семейные выходные, выбраться на рыбалку или собраться с друзьями за городом.</p>
+      <p style="margin:0;text-wrap:pretty">Для гостей предусмотрены оборудованная кухня, общий обеденный зал и места для гриля. Днём можно отправиться к Чудскому озеру или провести время на природе, а вечером — сходить в баню.</p>
+      <figure style="margin:40px 0 0;padding-top:32px;border-top:1px solid #D4D8CE">
+        <div>
+        <blockquote style="margin:0;font-family:Lora,Georgia,serif;font-style:italic;font-size:clamp(22px,2.2vw,27px);line-height:1.4;color:#284B3C;text-wrap:pretty">«Здесь каждый найдёт занятие по душе и насладится природой».</blockquote>
+        <figcaption style="margin-top:16px;font-size:15px;line-height:1.4"><strong style="font-weight:600">Жанна Орлова</strong><br><span style="color:#62685E">Хозяйка дома</span></figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" aria-labelledby="rooms-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
+  <div style="display:grid;grid-template-columns:{{ roomsHeadCols }};gap:24px 0;align-items:end;margin-bottom:clamp(32px,4vw,48px)">
+    <div style="min-width:0;padding-right:28px">
+      <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">Размещение</p>
+      <h2 id="rooms-title" style="margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">Выберите свой вариант отдыха</h2>
+    </div>
+    <p style="min-width:0;margin:0;color:#222B25;text-wrap:pretty">Приезжайте вдвоём, семьёй или небольшой компанией. Ниже — стоимость размещения за ночь; свободные даты и детали можно уточнить по телефону.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0;border-top:1px solid #222B25">
+    <sc-for list="{{ rooms }}" as="r" hint-placeholder-count="3">
+      <article style="display:flex;flex-direction:column;gap:20px;padding:28px 28px 32px 0;border-bottom:1px solid #D4D8CE;min-width:0">
+        <div>
+          <h3 style="margin:0 0 6px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(23px,2.2vw,27px);line-height:1.2">{{ r.name }}</h3>
+          <p style="margin:0;font-size:16px;color:#62685E">{{ r.desc }}</p>
+        </div>
+        <p style="margin:0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span style="font-family:Lora,Georgia,serif;font-size:clamp(40px,4vw,48px);font-weight:500;line-height:1;letter-spacing:-.02em;white-space:nowrap">{{ r.price }}</span><span style="font-size:16px;color:#62685E">/ ночь</span></p>
+        <a href="#contacts" onClick="{{ r.pick }}" aria-label="{{ r.cta }}" style="align-self:flex-start;display:inline-flex;align-items:center;height:48px;padding:0 20px;border-radius:7px;border:1.5px solid #284B3C;color:#284B3C;text-decoration:none;font-weight:600;font-size:15px;transition:background .18s,color .18s" style-hover="background:#284B3C;color:#fff">Уточнить даты</a>
+      </article>
+    </sc-for>
+  </div>
+  <div style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 48px;align-items:start">
+    <aside aria-label="Условия проживания" style="background:#E8DDCE;border-radius:10px;padding:24px 28px;display:flex;gap:16px">
+      <span aria-hidden="true" style="flex:none;width:22px;height:22px;margin-top:2px;background:#9B5139;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/info.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/info.svg) center/contain no-repeat"></span>
+      <div>
+        <p style="margin:0 0 6px;font-weight:700;font-size:16px">Обратите внимание</p>
+        <p style="margin:0;font-size:16px;line-height:1.55"><strong style="font-weight:700">Душевые и туалеты — общие.</strong> Гостям доступны оборудованная кухня и общий обеденный зал. Баня оплачивается отдельно.</p>
+      </div>
+    </aside>
+    <div style="align-self:center;display:flex;flex-direction:column;gap:4px">
+      <p style="margin:0;font-size:15px;color:#62685E">Наличие мест и окончательные условия проживания уточняйте при бронировании.</p>
+      <a href="{{ rulesHref }}" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600;color:#284B3C;text-decoration:none;transition:color .25s ease" style-hover="color:#1B3529">Правила проживания →</a>
+    </div>
+  </div>
+</section>
+
+<section id="amenities" aria-labelledby="amen-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
+  <div style="position:relative;isolation:isolate;overflow:hidden;background:#E6EBE2;border-radius:14px;padding:clamp(32px,5vw,72px) clamp(20px,5vw,72px)">
+    <div aria-hidden="true" style="position:absolute;z-index:-1;top:clamp(16px,3vw,40px);left:0;right:0;height:clamp(110px,11vw,170px);pointer-events:none"><div style="width:100%;height:100%;background:url(assets/liidia-pattern-green.png) repeat-x center/auto 100%;opacity:.08"></div></div>
+    <h2 id="amen-title" style="margin:0 0 clamp(32px,4vw,48px);max-width:640px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(30px,3.6vw,48px);line-height:1.12;letter-spacing:-.015em;text-wrap:balance">Всё необходимое для отдыха вместе</h2>
+    <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ amenCols }};gap:0 48px">
+      <li style="display:flex;gap:16px;padding:24px 0;border-top:1px solid #C9D0C3">
+        <span aria-hidden="true" style="flex:none;width:24px;height:24px;margin-top:2px;background:#284B3C;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chef-hat.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chef-hat.svg) center/contain no-repeat"></span>
+        <div><h3 style="margin:0 0 4px;font-size:18px;font-weight:700;line-height:1.3">Оборудованная кухня</h3><p style="margin:0;font-size:16px;color:#4B5248">Пространство для приготовления еды во время отдыха.</p></div>
+      </li>
+      <li style="display:flex;gap:16px;padding:24px 0;border-top:1px solid #C9D0C3">
+        <span aria-hidden="true" style="flex:none;width:24px;height:24px;margin-top:2px;background:#284B3C;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/utensils.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/utensils.svg) center/contain no-repeat"></span>
+        <div><h3 style="margin:0 0 4px;font-size:18px;font-weight:700;line-height:1.3">Общий обеденный зал</h3><p style="margin:0;font-size:16px;color:#4B5248">Место, чтобы собраться за одним столом.</p></div>
+      </li>
+      <li style="display:flex;gap:16px;padding:24px 0;border-top:1px solid #C9D0C3">
+        <span aria-hidden="true" style="flex:none;width:24px;height:24px;margin-top:2px;background:#284B3C;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/shower-head.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/shower-head.svg) center/contain no-repeat"></span>
+        <div><h3 style="margin:0 0 4px;font-size:18px;font-weight:700;line-height:1.3">Общие душевые и туалеты</h3><p style="margin:0;font-size:16px;color:#4B5248">Общие санитарные помещения для гостей дома.</p></div>
+      </li>
+      <li style="display:flex;gap:16px;padding:24px 0;border-top:1px solid #C9D0C3">
+        <span aria-hidden="true" style="flex:none;width:24px;height:24px;margin-top:2px;background:#284B3C;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/flame.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/flame.svg) center/contain no-repeat"></span>
+        <div><h3 style="margin:0 0 4px;font-size:18px;font-weight:700;line-height:1.3">Места для гриля</h3><p style="margin:0;font-size:16px;color:#4B5248">Возможность провести время за приготовлением еды на воздухе.</p></div>
+      </li>
+      <li style="display:flex;gap:16px;padding:24px 0;border-top:1px solid #C9D0C3">
+        <span aria-hidden="true" style="flex:none;width:24px;height:24px;margin-top:2px;background:#284B3C;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/bath.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/bath.svg) center/contain no-repeat"></span>
+        <div><h3 style="margin:0 0 4px;font-size:18px;font-weight:700;line-height:1.3">Баня и купель</h3><p style="margin:0;font-size:16px;color:#4B5248">Дополнительный отдых после прогулок и дня на природе. За отдельную плату.</p></div>
+      </li>
+      <li style="display:flex;gap:16px;padding:24px 0;border-top:1px solid #C9D0C3">
+        <span aria-hidden="true" style="flex:none;width:24px;height:24px;margin-top:2px;background:#284B3C;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/sailboat.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/sailboat.svg) center/contain no-repeat"></span>
+        <div><h3 style="margin:0 0 4px;font-size:18px;font-weight:700;line-height:1.3">Аренда лодок</h3><p style="margin:0;font-size:16px;color:#4B5248">Возможность выйти на воду. Условия аренды уточняйте у хозяйки.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="sauna" aria-labelledby="sauna-title" style="position:relative;isolation:isolate;margin-top:clamp(64px,9vw,120px);background:#3A2417;color:#fff">
+  <div aria-hidden="true" style="position:absolute;z-index:-1;top:0;bottom:0;left:{{ saunaPatLeft }};width:clamp(110px,11vw,170px);background:url(assets/liidia-pattern-sand-v.png) repeat-y center top/100% auto;pointer-events:none"></div>
+  <div style="width:100%;padding:clamp(56px,8vw,112px) clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,96px);align-items:center">
+    <div style="flex:1 1 400px;min-width:0;position:relative;aspect-ratio:4/3;max-height:clamp(320px,34vw,520px);border-radius:12px;overflow:hidden;background:#2A190F">
+      <image-slot id="liidia-sauna" src="assets/slots/liidia-sauna.webp" shape="rounded" radius="12" placeholder="Реальное фото бани или купели"></image-slot>
+    </div>
+    <div style="flex:0 1 clamp(480px,38vw,680px);margin-left:auto;min-width:0;">
+      <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#E3B98F">Отдых в своём ритме</p>
+      <h2 id="sauna-title" style="margin:0 0 20px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em">После прогулки — в&nbsp;баню</h2>
+      <p style="margin:0 0 36px;max-width:480px;color:#fff;text-wrap:pretty">Дополните поездку отдыхом в бане. Выберите вариант с купелью или без неё и заранее уточните удобное время.</p>
+      <div style="border-top:1px solid rgba(232,200,170,.3)">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding:22px 0;border-bottom:1px solid rgba(232,200,170,.3)">
+          <div><h3 style="margin:0 0 4px;font-size:clamp(22px,2vw,25px);font-family:Lora,Georgia,serif;font-weight:500">Баня с купелью</h3><p style="margin:0;font-size:16px;color:#fff">Минимальный заказ — 2&nbsp;часа.</p></div>
+          <p style="margin:0;white-space:nowrap"><span style="font-family:Lora,Georgia,serif;font-size:clamp(34px,3.4vw,42px);font-weight:500">50&nbsp;€</span> <span style="font-size:16px">/ час</span></p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding:22px 0;border-bottom:1px solid rgba(232,200,170,.3)">
+          <div><h3 style="margin:0 0 4px;font-size:clamp(22px,2vw,25px);font-family:Lora,Georgia,serif;font-weight:500">Баня без купели</h3><p style="margin:0;font-size:16px;color:#fff">Доступное время и условия уточняйте по телефону.</p></div>
+          <p style="margin:0;white-space:nowrap"><span style="font-family:Lora,Georgia,serif;font-size:clamp(34px,3.4vw,42px);font-weight:500">35&nbsp;€</span> <span style="font-size:16px">/ час</span></p>
+        </div>
+      </div>
+      <div style="margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+        <a href="#contacts" onClick="{{ pickSauna }}" style="display:inline-flex;align-items:center;height:52px;padding:0 24px;border-radius:7px;background:#F6F3EC;color:#6B3F22;text-decoration:none;font-weight:600;font-size:16px;transition:background .18s" style-hover="background:#fff;color:#3A2417">Уточнить время для бани</a>
+        <span style="font-size:15px;color:#fff">Баня оплачивается отдельно от проживания.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="activities" aria-labelledby="act-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
+  <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">Рядом с природой</p>
+  <h2 id="act-title" style="margin:0 0 clamp(32px,4vw,56px);max-width:760px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">У каждого — свои планы на&nbsp;выходные</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(24px,3vw,32px)">
+    <article style="display:flex;flex-direction:column;gap:20px;min-width:0">
+      <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#E8DDCE">
+        <image-slot id="liidia-river" shape="rounded" radius="12" src="assets/liidia-boat.webp" placeholder="Лодка с рыбаками на воде"></image-slot>
+      </div>
+      <h3 style="margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(24px,2.4vw,28px);line-height:1.2">К воде и на рыбалку</h3>
+      <p style="margin:0;max-width:640px;text-wrap:pretty">Река Раннапунгерья и близость Чудского озера делают Liidia удобной отправной точкой для отдыха у воды. Возможность аренды лодки уточняйте перед поездкой.</p>
+    </article>
+    <article style="display:flex;flex-direction:column;gap:20px;min-width:0">
+      <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;background:#E8DDCE;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,3vw,40px)">
+        <div aria-hidden="true" style="position:absolute;left:0;right:0;top:clamp(20px,3.5vw,48px);height:clamp(110px,11vw,170px);background:url(assets/liidia-pattern-green-soft.png) repeat-x center/auto 100%;pointer-events:none"></div>
+        <span style="font-family:Lora,Georgia,serif;font-size:clamp(88px,11vw,152px);line-height:.85;letter-spacing:-.04em;color:#284B3C">4&nbsp;км</span>
+        <span style="margin-top:12px;font-size:15px;font-weight:600;color:#222B25">от гостевого дома до пляжа Каукси</span>
+      </div>
+      <h3 style="margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(24px,2.4vw,28px);line-height:1.2">На пляж Каукси</h3>
+      <p style="margin:0;max-width:640px;text-wrap:pretty">Пляж Каукси находится в 4&nbsp;км от гостевого дома. Можно включить поездку к озеру в свои планы на день.</p>
+    </article>
+  </div>
+  <ul style="list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0 32px">
+    <li style="padding:24px 0;border-top:1px solid #222B25"><h3 style="margin:0 0 8px;font-size:18px;font-weight:700">На прогулку</h3><p style="margin:0;font-size:16px;color:#4B5248">Оставьте время для природы, неспешных прогулок и отдыха без плотного расписания.</p></li>
+    <li style="padding:24px 0;border-top:1px solid #222B25"><h3 style="margin:0 0 8px;font-size:18px;font-weight:700">За общий стол</h3><p style="margin:0;font-size:16px;color:#4B5248">Готовьте на общей кухне, собирайтесь в обеденном зале или воспользуйтесь местами для гриля.</p></li>
+    <li style="padding:24px 0;border-top:1px solid #222B25"><h3 style="margin:0 0 8px;font-size:18px;font-weight:700">Детям тоже есть чем заняться</h3><p style="margin:0;font-size:16px;color:#4B5248">Для детей предусмотрены настольные игры, батут и детская площадка.</p></li>
+    <li style="padding:24px 0;border-top:1px solid #222B25"><h3 style="margin:0 0 8px;font-size:18px;font-weight:700">А вечером — в баню</h3><p style="margin:0;font-size:16px;color:#4B5248">Завершите день отдыхом в бане с купелью или без неё. Услуга оплачивается отдельно.</p></li>
+  </ul>
+</section>
+
+<section id="groups" aria-labelledby="groups-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,5vw,80px) clamp(32px,6vw,96px);align-items:center;padding:clamp(32px,4vw,56px) 0;border-top:1px solid #D4D8CE;border-bottom:1px solid #D4D8CE">
+    <div style="flex:1 1 340px;min-width:0;display:flex;align-items:flex-end;gap:20px">
+      <span aria-hidden="true" style="font-family:Lora,Georgia,serif;font-size:clamp(120px,16vw,220px);line-height:.8;letter-spacing:-.05em;color:#9B5139">40</span>
+      <span style="font-size:17px;font-weight:600;line-height:1.3;padding-bottom:8px">до&nbsp;40<br>спальных мест</span>
+    </div>
+    <div style="flex:0 1 clamp(480px,38vw,680px);margin-left:auto;min-width:0;">
+      <h2 id="groups-title" style="margin:0 0 20px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.015em">Собирайтесь вместе</h2>
+      <p style="margin:0 0 14px;text-wrap:pretty">В Liidia можно разместить компанию — в гостевом доме до 40 спальных мест. Общая кухня, обеденный зал и места для гриля помогут провести время вместе.</p>
+      <p style="margin:0 0 28px;text-wrap:pretty">Планируете поездку большой группой? Позвоните, чтобы обсудить даты, состав компании и варианты размещения.</p>
+      <a href="#contacts" onClick="{{ pickGroup }}" style="display:inline-flex;align-items:center;height:52px;padding:0 24px;border-radius:7px;border:1.5px solid #284B3C;color:#284B3C;text-decoration:none;font-weight:600;font-size:16px;transition:background .18s,color .18s" style-hover="background:#284B3C;color:#fff">Обсудить размещение группы</a>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" aria-labelledby="gal-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:16px clamp(32px,6vw,96px);align-items:flex-end;margin-bottom:clamp(28px,3vw,40px)">
+    <h2 id="gal-title" style="flex:1 1 400px;min-width:0;margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">Познакомьтесь с Liidia поближе</h2>
+    <p style="flex:0 1 clamp(480px,38vw,680px);margin-left:auto;min-width:0;margin-top:0;margin-bottom:0;text-wrap:pretty">Посмотрите на дом и пространство для отдыха, чтобы представить свою поездку.</p>
+  </div>
+  <div ref="{{ galRef }}" onClick="{{ openLb }}" style="display:flex;flex-direction:column;gap:16px">
+  <div style="display:{{ galRowDisplay }};flex-wrap:wrap;gap:16px">
+    <figure style="order:0;margin:0;flex:2 1 420px;min-width:0;min-height:{{ vidMinH }};aspect-ratio:{{ vidAR }};align-self:stretch;position:relative;border-radius:10px;overflow:hidden;background:#222B25 url(https://i.ytimg.com/vi/aGRQcjyf5hg/hqdefault.jpg) center/cover no-repeat;container-type:size">
+      <sc-if value="{{ vidReady }}" hint-placeholder-val="{{ false }}"><iframe src="https://www.youtube-nocookie.com/embed/aGRQcjyf5hg?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=aGRQcjyf5hg&amp;controls=0&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="Видео: гостевой дом Liidia" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1" style="position:absolute;top:50%;left:50%;width:max(100cqw,177.78cqh);height:max(100cqh,56.25cqw);transform:translate(-50%,-50%);border:0;pointer-events:none"></iframe></sc-if>
+    </figure>
+    <div style="order:2;flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:16px">
+    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
+      <image-slot id="liidia-gal-2" src="assets/slots/liidia-gal-2.webp" shape="rounded" radius="10" placeholder="Гости за столом у дома"></image-slot>
+    </figure>
+    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
+      <image-slot id="liidia-gal-3" shape="rounded" radius="10" src="assets/liidia-gal-trampoline.webp" placeholder="Батут на территории"></image-slot>
+    </figure>
+    </div>
+  </div>
+  <div style="order:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">
+    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
+      <image-slot id="liidia-gal-4" src="assets/slots/liidia-gal-4.webp" shape="rounded" radius="10" placeholder="Изгиб реки"></image-slot>
+    </figure>
+    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
+      <image-slot id="liidia-gal-5" src="assets/slots/liidia-gal-5.webp" shape="rounded" radius="10" placeholder="Каяк на реке"></image-slot>
+    </figure>
+    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
+      <image-slot id="liidia-gal-6" src="assets/slots/liidia-gal-6.webp" shape="rounded" radius="10" placeholder="Дом и подъезд среди сосен"></image-slot>
+    </figure>
+  </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
+  <div style="display:flex;flex-wrap:wrap;gap:24px clamp(32px,6vw,96px);align-items:flex-start">
+    <h2 id="faq-title" style="flex:1 1 260px;min-width:0;margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em">Перед поездкой</h2>
+    <div style="flex:2 1 480px;min-width:0;border-top:1px solid #222B25">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="8">
+        <div style="border-bottom:1px solid #D4D8CE">
+          <h3 style="margin:0;font-size:inherit">
+            <button type="button" id="{{ f.btnId }}" aria-expanded="{{ f.expanded }}" aria-controls="{{ f.panelId }}" onClick="{{ f.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;min-height:56px;background:none;border:0;cursor:pointer;text-align:left;font:600 18px/1.4 Manrope,system-ui,sans-serif;color:#222B25" style-hover="color:#284B3C">
+              <span>{{ f.q }}</span>
+              <span aria-hidden="true" style="flex:none;font-size:26px;font-weight:400;line-height:1;color:#284B3C;width:24px;text-align:center;transform:{{ f.rot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)">+</span>
+            </button>
+          </h3>
+          <div id="{{ f.panelId }}" role="region" aria-labelledby="{{ f.btnId }}" aria-hidden="{{ f.hidden }}" style="display:grid;grid-template-rows:{{ f.rows }};visibility:{{ f.vis }};transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1),visibility .4s">
+            <div style="overflow:hidden;min-height:0">
+              <div style="padding:0 48px 24px 0;font-size:17px;color:#3A4237;max-width:820px;text-wrap:pretty;opacity:{{ f.opacity }};transform:{{ f.shift }};transition:opacity .35s ease .05s,transform .4s cubic-bezier(.2,.7,.2,1)">{{ f.a }}</div>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" ref="{{ contactsRef }}" aria-labelledby="contacts-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) clamp(64px,9vw,120px)">
+  <div style="position:relative;isolation:isolate;overflow:hidden;background:#E8DDCE;border-radius:14px;padding:clamp(28px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,80px)">
+    <div aria-hidden="true" style="position:absolute;z-index:-1;left:0;right:0;bottom:0;height:clamp(200px,22vw,340px);background:url(assets/liidia-pattern-green-soft.png) repeat-x center bottom/auto 100%;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 75%);mask-image:linear-gradient(to bottom,transparent 0%,#000 75%);pointer-events:none"></div>
+    <div style="min-width:0">
+      <img src="assets/liidia-logo10-green.svg" alt="" aria-hidden="true" style="display:block;width:56px;height:auto;margin:0 0 20px">
+      <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7E4029">Планируем поездку</p>
+      <h2 id="contacts-title" style="margin:0 0 20px;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">Договоримся о ваших выходных?</h2>
+      <p style="margin:0 0 28px;max-width:640px;text-wrap:pretty">Позвоните, чтобы узнать о свободных местах и обсудить детали. Подготовьте даты поездки и количество гостей — так будет проще подобрать вариант размещения.</p>
+      <sc-if value="{{ hasInterest }}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 24px;padding:14px 18px;border-radius:8px;background:#F6F3EC;border:1px solid #D4D8CE">
+          <div><p style="margin:0;font-weight:600;font-size:16px">{{ interestText }}</p><p style="margin:2px 0 0;font-size:14px;color:#62685E">{{ interestHint }}</p></div>
+          <button type="button" onClick="{{ pickNone }}" aria-label="Сбросить выбор" style="flex:none;width:44px;height:44px;border:0;background:none;cursor:pointer;color:#62685E;font-size:22px;line-height:1">×</button>
+        </div>
+      </sc-if>
+      <a href="tel:+37258152876" style="display:block;font-family:Lora,Georgia,serif;font-size:clamp(34px,4.6vw,58px);font-weight:500;line-height:1.1;letter-spacing:-.01em;color:#222B25;text-decoration:none;white-space:nowrap" style-hover="color:#284B3C">+372 5815 2876</a>
+      <div style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px">
+        <a href="tel:+37258152876" style="display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 26px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:background .18s" style-hover="background:#1B3529;color:#fff">
+          <span aria-hidden="true" style="width:18px;height:18px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/phone.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/phone.svg) center/contain no-repeat"></span>Позвонить</a>
+        <button type="button" onClick="{{ copyPhone }}" style="height:54px;padding:0 22px;border-radius:7px;border:1.5px solid #284B3C;background:transparent;color:#284B3C;font:600 16px Manrope,system-ui,sans-serif;cursor:pointer;transition:background .18s" style-hover="background:#F6F3EC">Скопировать номер</button>
+        <span role="status" aria-live="polite" style="font-size:15px;font-weight:600;color:#284B3C">{{ copyMsg }}</span>
+      </div>
+      <div style="margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px">
+        <span style="font-size:15px;color:#62685E">Или напишите:</span>
+        <a href="https://wa.me/37258152876" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:7px;background:#F6F3EC;border:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-weight:600;font-size:15px;transition:border-color .2s" style-hover="border-color:#284B3C;color:#222B25"><span aria-hidden="true" style="width:18px;height:18px;background:#284B3C;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg) center/contain no-repeat"></span>WhatsApp</a>
+        <a href="viber://chat?number=%2B37258152876" style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:7px;background:#F6F3EC;border:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-weight:600;font-size:15px;transition:border-color .2s" style-hover="border-color:#284B3C;color:#222B25"><span aria-hidden="true" style="width:18px;height:18px;background:#284B3C;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/viber.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/viber.svg) center/contain no-repeat"></span>Viber</a>
+      </div>
+    </div>
+    <div style="min-width:0;align-self:stretch;background:#F6F3EC;border-radius:10px;overflow:hidden;display:flex;flex-direction:column">
+      <div style="position:relative;flex:1 1 auto;min-height:280px;background:#E6EBE2">
+        <iframe src="https://www.google.com/maps?q=Liidia%2C%20Rannapungerja%2C%20Estonia&amp;z=13&amp;output=embed" title="Гостевой дом Liidia на карте" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+      </div>
+      <div style="padding:clamp(24px,3vw,36px)">
+      <div style="display:flex;gap:14px;align-items:flex-start">
+        <span aria-hidden="true" style="flex:none;width:22px;height:22px;margin-top:3px;background:#284B3C;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/map-pin.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/map-pin.svg) center/contain no-repeat"></span>
+        <div>
+          <p style="margin:0 0 4px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#62685E">Местоположение</p>
+          <address style="font-style:normal;font-size:18px;font-weight:600;line-height:1.45">Rannapungerja, 42208,<br>Ида-Вирумаа, Эстония</address>
+        </div>
+      </div>
+      <p style="margin:20px 0 0;padding-top:20px;border-top:1px solid #D4D8CE;font-size:16px">На берегу реки Раннапунгерья · В&nbsp;4&nbsp;км от пляжа Каукси</p>
+      <p style="margin:12px 0 0;font-size:15px;color:#62685E">Точный маршрут до гостевого дома уточните при бронировании.</p>
+      <a href="https://share.google/zL2gMesDWh2t9Z2pa" target="_blank" rel="noopener" style="margin-top:16px;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;font-size:15px;color:#284B3C;text-decoration:none;transition:color .25s ease" style-hover="color:#1B3529">Открыть в Google Maps ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+<footer style="background:#222B25;color:#fff">
+  <div style="width:100%;padding:56px clamp(20px,4vw,48px) calc(40px + {{ barPad }});display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:32px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px">
+      <img src="assets/liidia-logo-light.svg" alt="Liidia" style="display:block;height:48px;width:auto">
+      <p style="margin:0;font-size:15px;color:#D4D8CE;white-space:nowrap">Гостевой дом у реки Раннапунгерья</p>
+    </div>
+    <nav aria-label="Дополнительная навигация" style="display:flex;flex-wrap:wrap;gap:8px 32px;font-size:15px;white-space:nowrap;margin-left:{{ footNavMl }}">
+      <a href="#rooms" style="color:#fff;text-decoration:none;transition:color .25s ease" style-hover="color:#E8DDCE">Размещение</a>
+      <a href="#sauna" style="color:#fff;text-decoration:none;transition:color .25s ease" style-hover="color:#E8DDCE">Баня</a>
+      <a href="{{ rulesHref }}" style="color:#fff;text-decoration:none;transition:color .25s ease" style-hover="color:#E8DDCE">Правила проживания</a>
+    </nav>
+    <div style="flex:1 1 100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:#D4D8CE;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)">
+      <p style="margin:0">© {{ year }} Гостевой дом Liidia</p>
+      <p style="margin:0">Designed by <a href="https://sanya-boss.github.io/portfolio/" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;transition:color .25s ease" style-hover="color:#E8DDCE">Mežennõi</a></p>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div ref="{{ lbRef }}" role="dialog" aria-modal="true" aria-label="Просмотр фото" onClick="{{ lbBackdrop }}" onTouchStart="{{ lbTouchStart }}" onTouchEnd="{{ lbTouchEnd }}" style="position:fixed;inset:0;z-index:100;background:rgba(20,26,22,.94);display:flex;align-items:center;justify-content:center;padding:clamp(72px,8vw,96px) clamp(12px,8vw,120px)">
+    <img alt="" style="display:block;max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 24px 64px rgba(0,0,0,.45)">
+    <button type="button" ref="{{ lbCloseRef }}" onClick="{{ lbClose }}" aria-label="Закрыть" style="position:absolute;top:16px;right:16px;border:0;border-radius:50%;width:52px;height:52px;display:grid;place-items:center;background:rgba(246,243,236,.12);color:#fff;cursor:pointer;transition:background .2s" style-hover="background:rgba(246,243,236,.24)"><span aria-hidden="true" style="width:22px;height:22px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/x.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/x.svg) center/contain no-repeat"></span></button>
+    <button type="button" onClick="{{ lbPrev }}" aria-label="Предыдущее фото" style="position:absolute;left:16px;top:calc(50% - 26px);border:0;border-radius:50%;width:52px;height:52px;display:grid;place-items:center;background:rgba(246,243,236,.12);color:#fff;cursor:pointer;transition:background .2s" style-hover="background:rgba(246,243,236,.24)"><span aria-hidden="true" style="width:24px;height:24px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-left.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-left.svg) center/contain no-repeat"></span></button>
+    <button type="button" onClick="{{ lbNext }}" aria-label="Следующее фото" style="position:absolute;right:16px;top:calc(50% - 26px);border:0;border-radius:50%;width:52px;height:52px;display:grid;place-items:center;background:rgba(246,243,236,.12);color:#fff;cursor:pointer;transition:background .2s" style-hover="background:rgba(246,243,236,.24)"><span aria-hidden="true" style="width:24px;height:24px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-right.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-right.svg) center/contain no-repeat"></span></button>
+    <p aria-live="polite" style="position:absolute;bottom:20px;left:0;right:0;margin:0;text-align:center;color:#E8DDCE;font-size:14px;font-weight:600;letter-spacing:.08em">{{ lbCount }}</p>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <div role="region" aria-label="Быстрый звонок" aria-hidden="{{ barHidden }}" inert="{{ barInert }}" style="transform:{{ barShift }};transition:transform .4s cubic-bezier(.2,.7,.2,1);position:fixed;left:0;right:0;bottom:0;z-index:30;background:#F6F3EC;border-top:1px solid #D4D8CE;padding:10px 20px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <span style="font-size:15px;color:#62685E">От <strong style="color:#222B25;font-size:18px">55&nbsp;€</strong> / ночь</span>
+    <a href="tel:+37258152876" style="display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 22px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px">
+      <span aria-hidden="true" style="width:18px;height:18px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/phone.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/phone.svg) center/contain no-repeat"></span>Позвонить</a>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const PHONE = '+372 5815 2876';
+const NB = '\u00a0';
+const LANGS = [{ code: 'et', label: 'ET', name: 'Eesti', flag: 'https://flagcdn.com/ee.svg' }, { code: 'ru', label: 'RU', name: 'Русский', flag: 'https://flagcdn.com/ru.svg' }, { code: 'en', label: 'EN', name: 'English', flag: 'https://flagcdn.com/gb.svg' }];
+const T = {
+  ru: {
+    rooms: [['На двоих', 'Размещение для двух гостей.', 'на двоих'], ['На троих', 'Размещение для трёх гостей.', 'на троих'], ['На четверых', 'Размещение для четырёх гостей.', 'на четверых']],
+    cta: 'Уточнить даты: размещение ', menuOpen: 'Открыть меню', menuClose: 'Закрыть меню',
+    copied: 'Номер скопирован', copyFail: 'Не удалось скопировать. Выделите номер вручную',
+    room: ['Вас интересует размещение ', 'Назовите это при звонке — место ещё не забронировано.'],
+    sauna: ['Вас интересует баня', 'Уточните по телефону удобное время и вариант — с купелью или без.'],
+    group: ['Вас интересует размещение группы', 'Подготовьте даты и примерный состав компании.'],
+    faqs: [
+      ['Сколько стоит проживание?', 'Размещение на двоих — 55 € за ночь, на троих — 70 €, на четверых — 85 €. Наличие мест и условия проживания уточняйте по телефону.'],
+      ['Санузлы находятся в номерах?', 'В гостевом доме предусмотрены общие душевые и туалеты.'],
+      ['Можно ли готовить самостоятельно?', 'Гостям доступна просторная оборудованная кухня и общий обеденный зал. Также предусмотрены места для гриля; детали их использования уточняйте у хозяйки.'],
+      ['Сколько стоит баня?', 'Баня с купелью — 50 € в час, минимальный заказ 2 часа. Баня без купели — 35 € в час. Доступное время и условия уточняйте заранее.'],
+      ['Можно ли приехать большой компанией?', 'В доме до 40 спальных мест. Позвоните, чтобы обсудить размещение вашей группы на нужные даты.'],
+      ['Есть ли занятия для детей?', 'Для детей предусмотрены настольные игры, батут и детская площадка.'],
+      ['Как далеко пляж?', 'Пляж Каукси находится в 4 км от гостевого дома.'],
+      ['Как уточнить свободные даты?', 'Позвоните по номеру +372 5815 2876. Сообщите даты поездки, количество гостей и нужен ли вам отдых в бане.']
+    ]
+  },
+  et: {
+    rooms: [['Kahele', 'Majutus kahele külalisele.', 'kahele'], ['Kolmele', 'Majutus kolmele külalisele.', 'kolmele'], ['Neljale', 'Majutus neljale külalisele.', 'neljale']],
+    cta: 'Küsi kuupäevi: majutus ', menuOpen: 'Ava menüü', menuClose: 'Sulge menüü',
+    copied: 'Number kopeeritud', copyFail: 'Kopeerimine ebaõnnestus. Valige number käsitsi',
+    room: ['Teid huvitab majutus ', 'Mainige seda helistades — koht ei ole veel broneeritud.'],
+    sauna: ['Teid huvitab saun', 'Täpsustage telefoni teel sobiv aeg ja variant — kümblustünniga või ilma.'],
+    group: ['Teid huvitab grupi majutus', 'Pange valmis kuupäevad ja seltskonna ligikaudne suurus.'],
+    faqs: [
+      ['Kui palju maksab majutus?', 'Majutus kahele — 55 € öö, kolmele — 70 €, neljale — 85 €. Vabu kohti ja tingimusi täpsustage telefoni teel.'],
+      ['Kas tubades on WC ja dušš?', 'Puhkemajas on ühised dušid ja tualetid.'],
+      ['Kas saab ise süüa teha?', 'Külalistele on avatud avar sisustatud köök ja ühine söögisaal. Samuti on grillikohad; nende kasutamist täpsustage perenaiselt.'],
+      ['Kui palju maksab saun?', 'Saun kümblustünniga — 50 € tund, minimaalne tellimus 2 tundi. Saun ilma kümblustünnita — 35 € tund. Vaba aega ja tingimusi täpsustage varem.'],
+      ['Kas võib tulla suure seltskonnaga?', 'Majas on kuni 40 voodikohta. Helistage, et arutada oma grupi majutust soovitud kuupäevadel.'],
+      ['Kas lastele on tegevust?', 'Lastele on lauamängud, batuut ja mänguväljak.'],
+      ['Kui kaugel on rand?', 'Kauksi rand asub puhkemajast 4 km kaugusel.'],
+      ['Kuidas vabu kuupäevi küsida?', 'Helistage numbril +372 5815 2876. Öelge reisi kuupäevad, külaliste arv ja kas soovite ka sauna.']
+    ]
+  },
+  en: {
+    rooms: [['For two', 'A room for two guests.', 'for two'], ['For three', 'A room for three guests.', 'for three'], ['For four', 'A room for four guests.', 'for four']],
+    cta: 'Check dates: room ', menuOpen: 'Open menu', menuClose: 'Close menu',
+    copied: 'Number copied', copyFail: 'Couldn’t copy. Please select the number manually',
+    room: ['You’re interested in a room ', 'Mention it when you call — nothing is booked yet.'],
+    sauna: ['You’re interested in the sauna', 'Check a convenient time and option by phone — with or without the hot tub.'],
+    group: ['You’re interested in group accommodation', 'Have your dates and approximate group size ready.'],
+    faqs: [
+      ['How much does a stay cost?', 'A room for two is 55 € per night, for three 70 €, for four 85 €. Check availability and terms by phone.'],
+      ['Do rooms have private bathrooms?', 'The guest house has shared showers and toilets.'],
+      ['Can we cook for ourselves?', 'Guests have a spacious equipped kitchen and a shared dining hall. There are barbecue areas too — ask the host about using them.'],
+      ['How much is the sauna?', 'Sauna with hot tub — 50 € per hour, minimum 2 hours. Sauna without hot tub — 35 € per hour. Check times and terms in advance.'],
+      ['Can we come as a large group?', 'The house has up to 40 beds. Call to discuss accommodation for your group on your dates.'],
+      ['Is there anything for kids?', 'Kids have board games, a trampoline and a playground.'],
+      ['How far is the beach?', 'Kauksi beach is 4 km from the guest house.'],
+      ['How do I check available dates?', 'Call +372 5815 2876. Tell us your dates, the number of guests and whether you’d like the sauna.']
+    ]
+  }
+};
+const PRICES = ['55' + NB + '€', '70' + NB + '€', '85' + NB + '€'];
+// Static template copy: Russian source → [Estonian, English]
+const DICT = {
+  'Liidia — наверх': ['Liidia — üles', 'Liidia — back to top'],
+  'Разделы': ['Jaotised', 'Sections'],
+  'Язык': ['Keel', 'Language'],
+  'О доме': ['Majast', 'About'],
+  'Размещение': ['Majutus', 'Accommodation'],
+  'Баня': ['Saun', 'Sauna'],
+  'Галерея': ['Galerii', 'Gallery'],
+  'Контакты': ['Kontakt', 'Contact'],
+  'Уточнить даты': ['Küsi kuupäevi', 'Check dates'],
+  'Позвонить · +372 5815 2876': ['Helista · +372 5815 2876', 'Call · +372 5815 2876'],
+  'Раннапунгерья · Эстония': ['Rannapungerja · Eesti', 'Rannapungerja · Estonia'],
+  'Ваши выходные': ['Teie nädalavahetus', 'Your weekend'],
+  'в гостевом доме Liidia': ['Liidia Puhkemajas', 'at Liidia guest' + NB + 'house'],
+  'Отдых на берегу реки Раннапунгерья, рядом с Чудским озером. Приезжайте вдвоём, с семьёй или компанией — гулять, рыбачить и проводить время вместе.': ['Puhkus Rannapungerja jõe kaldal, Peipsi järve lähedal. Tulge kahekesi, perega või sõpradega — jalutama, kalale ja koos aega veetma.', 'A getaway on the bank of the Rannapungerja river, close to Lake Peipus. Come as a couple, with family or friends — to walk, fish and spend time together.'],
+  'Уточнить свободные даты': ['Küsi vabu kuupäevi', 'Check available dates'],
+  'Посмотреть размещение': ['Vaata majutust', 'See accommodation'],
+  'Размещение от': ['Majutus alates', 'Rooms from'],
+  'за ночь': ['öö eest', 'per night'],
+  'Гостевой дом Liidia · Раннапунгерья': ['Liidia Puhkemaja · Rannapungerja', 'Liidia guest house · Rannapungerja'],
+  'Коротко о главном': ['Lühidalt', 'At a glance'],
+  'На берегу реки': ['Jõe kaldal', 'On the riverbank'],
+  'Раннапунгерья': ['Rannapungerja', 'Rannapungerja'],
+  '4 км до пляжа': ['4' + NB + 'km randa', '4' + NB + 'km to the beach'],
+  'Пляж Каукси': ['Kauksi rand', 'Kauksi beach'],
+  'От 55 € / ночь': ['Alates 55' + NB + '€ / öö', 'From 55' + NB + '€ / night'],
+  'Размещение на двоих': ['Majutus kahele', 'Room for two'],
+  'До 40 спальных мест': ['Kuni 40 voodikohta', 'Up to 40 beds'],
+  'Для семей и компаний': ['Peredele ja seltskondadele', 'For families and groups'],
+  'О Liidia': ['Liidiast', 'About Liidia'],
+  'Место, где можно никуда не спешить': ['Koht, kus ei pea kuhugi kiirustama', 'A place where there’s no need to hurry'],
+  'Liidia — гостевой дом на берегу реки Раннапунгерья. Здесь можно устроить семейные выходные, выбраться на рыбалку или собраться с друзьями за городом.': ['Liidia on puhkemaja Rannapungerja jõe kaldal. Siin saab veeta pere nädalavahetuse, minna kalale või koguneda sõpradega linnast välja.', 'Liidia is a guest house on the bank of the Rannapungerja river. Come for a family weekend, a fishing trip or a get-together with friends outside the city.'],
+  'Для гостей предусмотрены оборудованная кухня, общий обеденный зал и места для гриля. Днём можно отправиться к Чудскому озеру или провести время на природе, а вечером — сходить в баню.': ['Külaliste käsutuses on sisustatud köök, ühine söögisaal ja grillikohad. Päeval võib minna Peipsi järve äärde või veeta aega looduses, õhtul aga sauna.', 'Guests have an equipped kitchen, a shared dining hall and barbecue areas. Spend the day at Lake Peipus or out in nature, and end the evening in the sauna.'],
+  '«Здесь каждый найдёт занятие по душе и насладится природой».': ['„Siin leiab igaüks endale meelepärase tegevuse ja saab nautida loodust.“', '“Everyone finds something to enjoy here — and time to take in nature.”'],
+  'Жанна Орлова': ['Žanna Orlova', 'Zhanna Orlova'],
+  'Хозяйка дома': ['Perenaine', 'Host'],
+  'Выберите свой вариант отдыха': ['Valige endale sobiv majutus', 'Choose your stay'],
+  'Приезжайте вдвоём, семьёй или небольшой компанией. Ниже — стоимость размещения за ночь; свободные даты и детали можно уточнить по телефону.': ['Tulge kahekesi, perega või väikese seltskonnaga. Allpool on majutuse hind öö kohta; vabu kuupäevi ja üksikasju saab täpsustada telefoni teel.', 'Come as a couple, with family or a small group. Below are the prices per night; check available dates and details by phone.'],
+  '/ ночь': ['/ öö', '/ night'],
+  'Условия проживания': ['Majutustingimused', 'Accommodation terms'],
+  'Обратите внимание': ['Pange tähele', 'Please note'],
+  'Душевые и туалеты — общие.': ['Dušid ja tualetid on ühised.', 'Showers and toilets are shared.'],
+  'Гостям доступны оборудованная кухня и общий обеденный зал. Баня оплачивается отдельно.': ['Külalistele on avatud sisustatud köök ja ühine söögisaal. Saun on eraldi tasu eest.', 'Guests can use the equipped kitchen and shared dining hall. The sauna is paid separately.'],
+  'Наличие мест и окончательные условия проживания уточняйте при бронировании.': ['Vabade kohtade olemasolu ja lõplikud tingimused täpsustage broneerimisel.', 'Availability and final terms are confirmed when booking.'],
+  'Всё необходимое для отдыха вместе': ['Kõik vajalik ühiseks puhkuseks', 'Everything you need to unwind together'],
+  'Оборудованная кухня': ['Sisustatud köök', 'Equipped kitchen'],
+  'Пространство для приготовления еды во время отдыха.': ['Ruum toidu valmistamiseks puhkuse ajal.', 'Space to cook during your stay.'],
+  'Общий обеденный зал': ['Ühine söögisaal', 'Shared dining hall'],
+  'Место, чтобы собраться за одним столом.': ['Koht, kus kõik mahuvad ühe laua taha.', 'A place to gather around one table.'],
+  'Общие душевые и туалеты': ['Ühised dušid ja tualetid', 'Shared showers and toilets'],
+  'Общие санитарные помещения для гостей дома.': ['Majakülaliste ühised pesuruumid.', 'Shared bathrooms for guests of the house.'],
+  'Места для гриля': ['Grillikohad', 'Barbecue areas'],
+  'Возможность провести время за приготовлением еды на воздухе.': ['Võimalus valmistada süüa värske õhu käes.', 'Cook and eat in the fresh air.'],
+  'Баня и купель': ['Saun ja kümblustünn', 'Sauna and hot tub'],
+  'Дополнительный отдых после прогулок и дня на природе. За отдельную плату.': ['Lisapuhkus pärast jalutuskäike ja päeva looduses. Eraldi tasu eest.', 'Extra relaxation after walks and a day outdoors. Charged separately.'],
+  'Аренда лодок': ['Paadirent', 'Boat rental'],
+  'Возможность выйти на воду. Условия аренды уточняйте у хозяйки.': ['Võimalus minna veele. Renditingimusi täpsustage perenaiselt.', 'Get out on the water. Ask the host about rental terms.'],
+  'Отдых в своём ритме': ['Puhkus omas rütmis', 'Rest at your own pace'],
+  'После прогулки — в баню': ['Pärast jalutuskäiku — sauna', 'After a walk — the' + NB + 'sauna'],
+  'Дополните поездку отдыхом в бане. Выберите вариант с купелью или без неё и заранее уточните удобное время.': ['Täiendage reisi saunaskäiguga. Valige kümblustünniga või ilma ning leppige sobiv aeg varem kokku.', 'Round off your trip in the sauna. Choose with or without the hot tub and book a convenient time in advance.'],
+  'Баня с купелью': ['Saun kümblustünniga', 'Sauna with hot tub'],
+  'Минимальный заказ — 2 часа.': ['Minimaalne tellimus — 2' + NB + 'tundi.', 'Minimum booking — 2' + NB + 'hours.'],
+  '/ час': ['/ tund', '/ hour'],
+  'Баня без купели': ['Saun ilma kümblustünnita', 'Sauna without hot tub'],
+  'Доступное время и условия уточняйте по телефону.': ['Vaba aega ja tingimusi täpsustage telefoni teel.', 'Check available times and terms by phone.'],
+  'Уточнить время для бани': ['Küsi saunaaega', 'Check sauna times'],
+  'Баня оплачивается отдельно от проживания.': ['Saun on majutusest eraldi tasu eest.', 'The sauna is paid separately from accommodation.'],
+  'Рядом с природой': ['Looduse lähedal', 'Close to nature'],
+  'У каждого — свои планы на выходные': ['Igaühel omad plaanid nädalavahetuseks', 'Everyone has their own weekend plans'],
+  'К воде и на рыбалку': ['Vee äärde ja kalale', 'To the water and fishing'],
+  'Река Раннапунгерья и близость Чудского озера делают Liidia удобной отправной точкой для отдыха у воды. Возможность аренды лодки уточняйте перед поездкой.': ['Rannapungerja jõgi ja Peipsi järve lähedus teevad Liidiast mugava lähtepunkti puhkuseks vee ääres. Paadirendi võimalust täpsustage enne reisi.', 'The Rannapungerja river and nearby Lake Peipus make Liidia a handy base for time by the water. Ask about boat rental before your trip.'],
+  '4 км': ['4' + NB + 'km', '4' + NB + 'km'],
+  'от гостевого дома до пляжа Каукси': ['puhkemajast Kauksi rannani', 'from the guest house to Kauksi beach'],
+  'На пляж Каукси': ['Kauksi randa', 'To Kauksi beach'],
+  'Пляж Каукси находится в 4 км от гостевого дома. Можно включить поездку к озеру в свои планы на день.': ['Kauksi rand asub puhkemajast 4' + NB + 'km kaugusel. Järve äärde sõidu saab lisada oma päevaplaani.', 'Kauksi beach is 4' + NB + 'km from the guest house — easy to fit a trip to the lake into your day.'],
+  'На прогулку': ['Jalutama', 'Go for a walk'],
+  'Оставьте время для природы, неспешных прогулок и отдыха без плотного расписания.': ['Jätke aega loodusele, rahulikele jalutuskäikudele ja puhkusele ilma tiheda graafikuta.', 'Leave time for nature, slow walks and rest without a tight schedule.'],
+  'За общий стол': ['Ühise laua taha', 'Around one table'],
+  'Готовьте на общей кухне, собирайтесь в обеденном зале или воспользуйтесь местами для гриля.': ['Valmistage süüa ühisköögis, kogunege söögisaali või kasutage grillikohti.', 'Cook in the shared kitchen, gather in the dining hall or use the barbecue areas.'],
+  'Детям тоже есть чем заняться': ['Ka lastel on tegevust', 'Plenty for kids too'],
+  'Для детей предусмотрены настольные игры, батут и детская площадка.': ['Lastele on lauamängud, batuut ja mänguväljak.', 'Kids have board games, a trampoline and a playground.'],
+  'А вечером — в баню': ['Ja õhtul — sauna', 'And in the evening — the sauna'],
+  'Завершите день отдыхом в бане с купелью или без неё. Услуга оплачивается отдельно.': ['Lõpetage päev saunas kümblustünniga või ilma. Teenus on eraldi tasu eest.', 'End the day in the sauna, with or without the hot tub. Charged separately.'],
+  'до 40': ['kuni 40', 'up to 40'],
+  'спальных мест': ['voodikohta', 'beds'],
+  'Собирайтесь вместе': ['Tulge kokku', 'Come together'],
+  'В Liidia можно разместить компанию — в гостевом доме до 40 спальных мест. Общая кухня, обеденный зал и места для гриля помогут провести время вместе.': ['Liidiasse mahub ka suur seltskond — puhkemajas on kuni 40 voodikohta. Ühisköök, söögisaal ja grillikohad aitavad koos aega veeta.', 'Liidia can host a whole group — the guest house has up to 40 beds. The shared kitchen, dining hall and barbecue areas make it easy to spend time together.'],
+  'Планируете поездку большой группой? Позвоните, чтобы обсудить даты, состав компании и варианты размещения.': ['Plaanite reisi suure grupiga? Helistage, et arutada kuupäevi, seltskonna suurust ja majutusvõimalusi.', 'Planning a trip with a large group? Call to discuss dates, group size and room options.'],
+  'Обсудить размещение группы': ['Arutame grupi majutust', 'Discuss group accommodation'],
+  'Познакомьтесь с Liidia поближе': ['Tutvuge Liidiaga lähemalt', 'Get to know Liidia'],
+  'Посмотрите на дом и пространство для отдыха, чтобы представить свою поездку.': ['Vaadake maja ja puhkeala, et oma reisi ette kujutada.', 'Take a look at the house and grounds to picture your stay.'],
+  'Видео: гостевой дом Liidia': ['Video: Liidia Puhkemaja', 'Video: Liidia guest house'],
+  'Гостевой дом Liidia с высоты': ['Liidia Puhkemaja linnulennult', 'Liidia guest house from above'],
+  'Река Раннапунгерья у домов': ['Rannapungerja jõgi majade juures', 'The Rannapungerja river by the houses'],
+  'Реальное фото бани или купели': ['Sauna või kümblustünni foto', 'Sauna or hot tub photo'],
+  'Лодка с рыбаками на воде': ['Paat kaluritega veel', 'Boat with anglers on the water'],
+  'Гости за столом у дома': ['Külalised laua taga maja juures', 'Guests at a table by the house'],
+  'Батут на территории': ['Batuut õuealal', 'Trampoline on the grounds'],
+  'Изгиб реки': ['Jõekäär', 'River bend'],
+  'Каяк на реке': ['Süst jõel', 'Kayak on the river'],
+  'Дом и подъезд среди сосен': ['Maja ja juurdesõit männikus', 'House and driveway among the pines'],
+  'Перед поездкой': ['Enne reisi', 'Before your trip'],
+  'Планируем поездку': ['Planeerime reisi', 'Plan your trip'],
+  'Договоримся о ваших выходных?': ['Lepime teie nädalavahetuse kokku?', 'Shall we plan your weekend?'],
+  'Позвоните, чтобы узнать о свободных местах и обсудить детали. Подготовьте даты поездки и количество гостей — так будет проще подобрать вариант размещения.': ['Helistage, et küsida vabu kohti ja arutada üksikasju. Pange valmis reisi kuupäevad ja külaliste arv — nii on lihtsam sobivat majutust leida.', 'Call to check availability and discuss the details. Have your dates and number of guests ready — it makes finding the right room easier.'],
+  'Сбросить выбор': ['Tühista valik', 'Clear selection'],
+  'Позвонить': ['Helista', 'Call'],
+  'Позвонить в Liidia': ['Helista Liidiasse', 'Call Liidia'],
+  'Скопировать номер': ['Kopeeri number', 'Copy number'],
+  'Гостевой дом Liidia на карте': ['Liidia Puhkemaja kaardil', 'Liidia guest house on the map'],
+  'Местоположение': ['Asukoht', 'Location'],
+  'Ида-Вирумаа, Эстония': ['Ida-Virumaa, Eesti', 'Ida-Viru County, Estonia'],
+  'На берегу реки Раннапунгерья · В 4 км от пляжа Каукси': ['Rannapungerja jõe kaldal · 4' + NB + 'km Kauksi rannast', 'On the Rannapungerja riverbank · 4' + NB + 'km from Kauksi beach'],
+  'Точный маршрут до гостевого дома уточните при бронировании.': ['Täpse teekonna puhkemajja saate broneerimisel.', 'We’ll share exact directions when you book.'],
+  'Открыть в Google Maps ↗': ['Ava Google Mapsis ↗', 'Open in Google Maps ↗'],
+  'Гостевой дом у реки Раннапунгерья': ['Puhkemaja Rannapungerja jõe ääres', 'Guest house on the Rannapungerja river'],
+  'Дополнительная навигация': ['Lisanavigatsioon', 'Footer navigation'],
+  'Гостевой дом Liidia': ['Liidia Puhkemaja', 'Liidia Guest House'],
+  'Быстрый звонок': ['Kiirkõne', 'Quick call'],
+  'Правила проживания': ['Kodukord', 'House rules'],
+  'Правила проживания →': ['Kodukord →', 'House rules →'],
+  'Перейти к содержанию': ['Liigu sisu juurde', 'Skip to content'],
+  'Или напишите:': ['Või kirjutage:', 'Or message us:'],
+  'Просмотр фото': ['Foto vaatamine', 'Photo viewer'],
+  'Закрыть': ['Sulge', 'Close'],
+  'Предыдущее фото': ['Eelmine foto', 'Previous photo'],
+  'Следующее фото': ['Järgmine foto', 'Next photo'],
+  'От': ['Alates', 'From'],
+  'Гостевой дом Liidia — отдых в Раннапунгерья': ['Liidia Puhkemaja — puhkus Rannapungerjal', 'Liidia Guest House — a getaway in Rannapungerja'],
+  'Гостевой дом Liidia на берегу реки Раннапунгерья: размещение от 55 € за ночь, баня с купелью и отдых для компаний. Пляж Каукси — в 4 км.': ['Liidia Puhkemaja Rannapungerja jõe kaldal: majutus alates 55 € öö, saun kümblustünniga ja puhkus seltskondadele. Kauksi rand on 4 km kaugusel.', 'Liidia guest house on the Rannapungerja river: rooms from 55 € per night, sauna with hot tub and stays for groups. Kauksi beach is 4 km away.'],
+  'Liidia — ваши выходные у реки': ['Liidia — teie nädalavahetus jõe ääres', 'Liidia — your weekend by the river'],
+  'Гостевой дом в Раннапунгерья: отдых на природе, размещение для семей и компаний, баня и купель.': ['Puhkemaja Rannapungerjal: puhkus looduses, majutus peredele ja seltskondadele, saun ja kümblustünn.', 'A guest house in Rannapungerja: time in nature, rooms for families and groups, sauna and hot tub.']
+};
+const norm = (t) => t.replace(/\s+/g, ' ').trim();
+const DICT_N = {};
+for (const k in DICT) DICT_N[norm(k)] = DICT[k];
+const ATTRS = ['aria-label', 'alt', 'title', 'placeholder'];
+
+class Component extends DCLogic {
+  state = { lb: null, vidReady: false, lang: (() => { try { const v = localStorage.getItem('liidia-lang'); return LANGS.some((l) => l.code === v) ? v : 'et'; } catch (e) { return 'et'; } })(), w: typeof window !== 'undefined' ? window.innerWidth : 1280, menu: false, interest: null, open: {}, copyMsg: '', heroOut: false, contactsIn: false };
+  heroCtaRef = React.createRef();
+  langRef = React.createRef();
+  galRef = React.createRef();
+  lbRef = React.createRef();
+  lbCloseRef = React.createRef();
+  contactsRef = React.createRef();
+
+  componentDidMount() {
+    this._prevState = { ...this.state };
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onKey = (e) => {
+      if (this.state.lb) {
+        if (e.key === 'Escape') this.closeLb();
+        else if (e.key === 'ArrowLeft') this.stepLb(-1);
+        else if (e.key === 'ArrowRight') this.stepLb(1);
+        else if (e.key === 'Tab') { e.preventDefault(); const b = Array.from(this.lbRef.current ? this.lbRef.current.querySelectorAll('button') : []); if (b.length) { const k = b.indexOf(document.activeElement); b[(k + (e.shiftKey ? b.length - 1 : 1)) % b.length].focus(); } }
+        return;
+      }
+      if (e.key === 'Escape') this.setState({ menu: false, langOpen: false });
+    };
+    this.onDocDown = (e) => { if (this.state.langOpen && !e.target.closest('[aria-haspopup]') && !e.target.closest('[role="menu"]')) this.setState({ langOpen: false }); };
+    document.addEventListener('pointerdown', this.onDocDown);
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('keydown', this.onKey);
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.target === this.heroCtaRef.current) this.setState({ heroOut: !en.isIntersecting && en.boundingClientRect.top < 0 });
+        if (en.target === this.contactsRef.current) this.setState({ contactsIn: en.isIntersecting });
+      });
+    });
+    this.setupReveal();
+    try { const q = new URLSearchParams(location.search).get('lang'); if (q && LANGS.some((l) => l.code === q) && q !== this.state.lang) this.setState({ lang: q }); } catch (e) {}
+    this.vidIO = new IntersectionObserver((en) => { if (en.some((x) => x.isIntersecting)) { this.setState({ vidReady: true }); this.vidIO.disconnect(); } }, { rootMargin: '600px 0px' });
+    setTimeout(() => { if (this.galRef.current) this.vidIO.observe(this.galRef.current); }, 0);
+    setTimeout(() => this.startDrift(), 400);
+    this.textMap = new WeakMap();
+    this.attrMap = new WeakMap();
+    this.mo = new MutationObserver(() => { cancelAnimationFrame(this.trRaf); this.trRaf = requestAnimationFrame(() => this.translateDom()); });
+    this.mo.observe(document.body, { childList: true, subtree: true, characterData: true });
+    this.translateDom();
+    setTimeout(() => {
+      if (this.heroCtaRef.current) this.io.observe(this.heroCtaRef.current);
+      if (this.contactsRef.current) this.io.observe(this.contactsRef.current);
+    }, 0);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('keydown', this.onKey);
+    document.removeEventListener('pointerdown', this.onDocDown);
+    this.io && this.io.disconnect();
+    this.revealIO && this.revealIO.disconnect();
+    this.mo && this.mo.disconnect();
+    this.vidIO && this.vidIO.disconnect();
+    (this.drifts || []).forEach((a) => a.cancel());
+    document.body.style.overflow = '';
+    cancelAnimationFrame(this.trRaf);
+    clearTimeout(this.copyT);
+  }
+
+  setupReveal() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    const ease = 'cubic-bezier(.2,.7,.2,1)';
+    const show = (el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      setTimeout(() => { el.style.transition = ''; el.style.willChange = ''; }, 1400);
+    };
+    this.revealIO = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { show(en.target); this.revealIO.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    setTimeout(() => {
+      const groups = Array.from(document.querySelectorAll('main section'));
+      groups.forEach((sec) => {
+        const items = Array.from(sec.querySelectorAll(':scope > p, :scope > h2, :scope > dl, :scope > figure, :scope > ul, :scope > div > *, :scope > div > div > *'))
+          .filter((el) => !el.closest('[role="region"]') && el.tagName !== 'SC-FOR' && el.getBoundingClientRect().height > 0);
+        const seen = new Set();
+        items.filter((el) => { for (const s of seen) if (s.contains(el)) return false; seen.add(el); return true; })
+          .slice(0, 14).forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(16px)';
+            el.style.willChange = 'opacity, transform';
+            el.style.transition = 'opacity .5s ' + ease + ' ' + (i % 6) * 70 + 'ms, transform .55s ' + ease + ' ' + (i % 6) * 70 + 'ms';
+            this.revealIO.observe(el);
+          });
+      });
+    }, 60);
+  }
+
+  // The DC runtime only passes prevProps, so keep our own snapshot of the previous state.
+  componentDidUpdate(pp) {
+    const ps = this._prevState || {};
+    this._prevState = { ...this.state };
+    this._didUpdate(pp, ps);
+  }
+
+  _didUpdate(pp, ps) {
+    if (this.state.lb && this.lbRef.current) { const im = this.lbRef.current.querySelector('img'); const it = this.state.lb.items[this.state.lb.i]; if (im && im.getAttribute('src') !== it.src) { im.src = it.src; im.alt = it.alt; } }
+    if (ps.lang !== this.state.lang) this.translateDom();
+    if (!ps.lb && this.state.lb) {
+      document.body.style.overflow = 'hidden';
+      const el = this.lbRef.current;
+      if (el && el.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 250, easing: 'ease-out' });
+      this.lbCloseRef.current && this.lbCloseRef.current.focus();
+    }
+    if (ps.lb && this.state.lb && ps.lb.i !== this.state.lb.i) {
+      const img = this.lbRef.current && this.lbRef.current.querySelector('img');
+      if (img && img.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) img.animate([{ opacity: 0, transform: 'scale(.985)' }, { opacity: 1, transform: 'none' }], { duration: 300, easing: 'cubic-bezier(.2,.7,.2,1)' });
+    }
+    if (ps.lb && !this.state.lb) {
+      document.body.style.overflow = '';
+      this.lbReturn && this.lbReturn.focus && this.lbReturn.focus({ preventScroll: true });
+    }
+  }
+
+  startDrift() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.drifts = [];
+    document.querySelectorAll('[style*="liidia-pattern"]').forEach((el) => {
+      if (!el.animate) return;
+      const vertical = (el.getAttribute('style') || '').indexOf('sand-v') >= 0;
+      const cs = getComputedStyle(el);
+      const size = vertical ? (parseFloat(cs.width) || 140) : (parseFloat(cs.height) || 140);
+      const tile = Math.round(size * 433 / 520);
+      const prop = vertical ? 'backgroundPositionY' : 'backgroundPositionX';
+      const base = vertical ? '' : '';
+      this.drifts.push(el.animate([{ [prop]: '0px' }, { [prop]: (vertical ? tile : -tile) + 'px' }], { duration: 70000, iterations: Infinity, easing: 'linear' }));
+    });
+  }
+
+  openLb = (e) => {
+    const slot = e.target && e.target.closest && e.target.closest('image-slot');
+    if (!slot) return;
+    const slots = Array.from(document.querySelectorAll('#gallery image-slot'));
+    const items = [];
+    let start = 0;
+    slots.forEach((s) => {
+      const im = s.shadowRoot && s.shadowRoot.querySelector('.frame img');
+      const src = (im && im.currentSrc) || (im && im.src) || s.getAttribute('src');
+      if (!src) return;
+      if (s === slot) start = items.length;
+      items.push({ src, alt: s.getAttribute('placeholder') || '' });
+    });
+    if (!items.length) return;
+    this.lbReturn = slot;
+    this.setState({ lb: { items, i: start } });
+  };
+  closeLb = () => this.setState({ lb: null });
+  stepLb = (d) => this.setState((p) => p.lb ? { lb: { ...p.lb, i: (p.lb.i + d + p.lb.items.length) % p.lb.items.length } } : null);
+
+
+  tr(ru) {
+    const i = this.state.lang === 'et' ? 0 : this.state.lang === 'en' ? 1 : -1;
+    if (i < 0) return null;
+    const e = DICT_N[norm(ru)];
+    return e ? e[i] : null;
+  }
+
+  translateDom() {
+    if (!this.textMap) return;
+    const lang = this.state.lang;
+    document.documentElement.lang = lang;
+    const root = document.body;
+    const tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = tw.nextNode())) {
+      const p = n.parentElement;
+      if (!p || p.closest('script,style')) continue;
+      let rec = this.textMap.get(n);
+      if (!rec || n.nodeValue !== rec.applied) { rec = { orig: n.nodeValue, applied: n.nodeValue }; this.textMap.set(n, rec); }
+      if (!/\S/.test(rec.orig)) continue;
+      const t = this.tr(rec.orig);
+      const lead = rec.orig.match(/^\s*/)[0], trail = rec.orig.match(/\s*$/)[0];
+      const next = t ? lead + t + trail : rec.orig;
+      if (n.nodeValue !== next) { rec.applied = next; n.nodeValue = next; }
+    }
+    root.querySelectorAll('[aria-label],[alt],[title],[placeholder]').forEach((el) => {
+      let rec = this.attrMap.get(el);
+      if (!rec) { rec = {}; this.attrMap.set(el, rec); }
+      ATTRS.forEach((a) => {
+        if (!el.hasAttribute(a)) return;
+        const cur = el.getAttribute(a);
+        if (!rec[a] || cur !== rec[a].applied) rec[a] = { orig: cur, applied: cur };
+        const t = this.tr(rec[a].orig);
+        const next = t || rec[a].orig;
+        if (cur !== next) { rec[a].applied = next; el.setAttribute(a, next); }
+      });
+    });
+    const head = [[document.querySelector('meta[name="description"]'), 'content'], [document.querySelector('meta[property="og:title"]'), 'content'], [document.querySelector('meta[property="og:description"]'), 'content']];
+    if (!this.headOrig) this.headOrig = { title: document.title, metas: head.map(([el, a]) => el && el.getAttribute(a)) };
+    document.title = this.tr(this.headOrig.title) || this.headOrig.title;
+    head.forEach(([el, a], i) => { if (el) { const o = this.headOrig.metas[i]; el.setAttribute(a, this.tr(o) || o); } });
+  }
+
+  setLang = (code) => () => {
+    try { localStorage.setItem('liidia-lang', code); } catch (e) {}
+    try { const u = new URL(location.href); u.searchParams.set('lang', code); history.replaceState(history.state, '', u.toString()); } catch (e) {}
+    this.setState({ lang: code, copyMsg: '', langOpen: false });
+  };
+
+  pick = (interest) => () => this.setState({ interest, menu: false });
+
+  copyPhone = async () => {
+    clearTimeout(this.copyT);
+    try {
+      await navigator.clipboard.writeText(PHONE);
+      this.setState({ copyMsg: T[this.state.lang].copied });
+    } catch (e) {
+      this.setState({ copyMsg: T[this.state.lang].copyFail });
+    }
+    this.copyT = setTimeout(() => this.setState({ copyMsg: '' }), 3500);
+  };
+
+  renderVals() {
+    const s = this.state;
+    const isMobile = s.w < 960;
+    const it = s.interest;
+    let interestText = '', interestHint = '';
+    const L = T[s.lang] || T.ru;
+    if (it && it.type === 'room') { interestText = L.room[0] + L.rooms[it.idx][2]; interestHint = L.room[1]; }
+    if (it && it.type === 'sauna') { interestText = L.sauna[0]; interestHint = L.sauna[1]; }
+    if (it && it.type === 'group') { interestText = L.group[0]; interestHint = L.group[1]; }
+    const barVisible = isMobile && s.heroOut && !s.contactsIn && !s.menu;
+    return {
+      isMobile, isDesktop: !isMobile, footNavMl: isMobile ? '0' : 'auto', vidMinH: s.w < 720 ? '0px' : '320px', vidAR: s.w < 720 ? '16 / 9' : 'auto', galRowDisplay: s.w < 720 ? 'contents' : 'flex', heroPatDesk: isMobile ? 'none' : 'block', amenCols: s.w < 720 ? 'minmax(0,1fr)' : s.w < 1024 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))', saunaPatLeft: s.w < 1000 ? 'calc(50% - clamp(55px,5.5vw,85px))' : 'calc(clamp(20px,4vw,48px) + (100% - 2 * clamp(20px,4vw,48px) - clamp(480px,38vw,680px) - clamp(32px,6vw,96px)) / 2 - clamp(55px,5.5vw,85px))', roomsHeadCols: s.w < 900 ? 'minmax(0,1fr)' : 'minmax(0,2fr) minmax(0,1fr)', heroPatMob: isMobile ? 'block' : 'none',
+      hdrCtaMax: s.heroOut ? '1fr' : '0fr', hdrCtaMl: s.heroOut ? '0px' : '-24px',
+      hdrCtaOpacity: s.heroOut ? 1 : 0, hdrCtaShift: s.heroOut ? 'none' : 'translateX(16px)',
+      hdrCtaHidden: s.heroOut ? 'false' : 'true', hdrCtaInert: s.heroOut ? undefined : '',
+      menuRows: s.menu ? '1fr' : '0fr', menuVis: s.menu ? 'visible' : 'hidden',
+      menuOpacity: s.menu ? 1 : 0, menuShift: s.menu ? 'none' : 'translateY(-10px)',
+      menuHidden: s.menu ? 'false' : 'true', menuInert: s.menu ? undefined : '',
+      menuIcon: 'https://unpkg.com/lucide-static@0.460.0/icons/' + (s.menu ? 'x' : 'menu') + '.svg',
+      barShift: barVisible ? 'none' : 'translateY(110%)', barHidden: barVisible ? 'false' : 'true', barInert: barVisible ? undefined : '',
+      menuExpanded: s.menu ? 'true' : 'false',
+      menuLabel: s.menu ? L.menuClose : L.menuOpen,
+      langs: LANGS.map((l) => ({ ...l, pressed: l.code === s.lang ? 'true' : 'false', bg: l.code === s.lang ? '#F6F3EC' : 'transparent', fg: l.code === s.lang ? '#284B3C' : '#62685E', pick: this.setLang(l.code) })),
+      langRef: this.langRef, toggleLang: () => this.setState({ langOpen: !s.langOpen }),
+      langCode: s.lang.toUpperCase(), langFlag: (LANGS.find((l) => l.code === s.lang) || LANGS[0]).flag, langBtnLabel: (LANGS.find((l) => l.code === s.lang) || LANGS[0]).name,
+      langExpanded: s.langOpen ? 'true' : 'false', langHidden: s.langOpen ? 'false' : 'true', langVis: s.langOpen ? 'visible' : 'hidden', langOpacity: s.langOpen ? 1 : 0, langShift: s.langOpen ? 'none' : 'translateY(-6px)', langChevron: s.langOpen ? 'rotate(180deg)' : 'none',
+      toggleMenu: () => this.setState({ menu: !s.menu }),
+      closeMenu: () => this.setState({ menu: false }),
+      heroCtaRef: this.heroCtaRef, contactsRef: this.contactsRef,
+      rooms: L.rooms.map(([name, desc, who], idx) => ({ name, desc, who, price: PRICES[idx], cta: L.cta + who, pick: this.pick({ type: 'room', idx }) })),
+      pickNone: () => this.setState({ interest: null, menu: false }),
+      pickSauna: this.pick({ type: 'sauna' }),
+      pickGroup: this.pick({ type: 'group' }),
+      hasInterest: !!it, interestText, interestHint,
+      faqs: L.faqs.map(([q, a], i) => {
+        const open = !!s.open[i];
+        return { q, a, open, expanded: open ? 'true' : 'false', rot: open ? 'rotate(45deg)' : 'none', rows: open ? '1fr' : '0fr', vis: open ? 'visible' : 'hidden', hidden: open ? 'false' : 'true', opacity: open ? 1 : 0, shift: open ? 'none' : 'translateY(-8px)', btnId: 'faq-b' + i, panelId: 'faq-p' + i,
+          toggle: () => this.setState((p) => ({ open: { ...p.open, [i]: !p.open[i] } })) };
+      }),
+      copyPhone: this.copyPhone, copyMsg: s.copyMsg,
+      barVisible, barPad: isMobile ? '72px' : '0px',
+      year: new Date().getFullYear(), rulesHref: 'house-rules.html?lang=' + s.lang,
+      galRef: this.galRef, lbRef: this.lbRef, lbCloseRef: this.lbCloseRef, openLb: this.openLb, vidReady: s.vidReady,
+      lbOpen: !!s.lb, lbSrc: s.lb ? s.lb.items[s.lb.i].src : '', lbAlt: s.lb ? s.lb.items[s.lb.i].alt : '',
+      lbCount: s.lb ? (s.lb.i + 1) + ' / ' + s.lb.items.length : '',
+      lbClose: this.closeLb, lbPrev: () => this.stepLb(-1), lbNext: () => this.stepLb(1),
+      lbBackdrop: (e) => { if (e.target === e.currentTarget) this.closeLb(); },
+      lbTouchStart: (e) => { this.tx = e.touches[0].clientX; },
+      lbTouchEnd: (e) => { const dx = e.changedTouches[0].clientX - (this.tx || 0); if (Math.abs(dx) > 50) this.stepLb(dx < 0 ? 1 : -1); }
+    };
+  }
+}
+</script>
+</body>
+</html>
