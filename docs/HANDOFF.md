@@ -72,3 +72,14 @@ Real sauna/kitchen/bathroom photos · exact map pin (client share link: https://
 - `site/House Rules.dc.html` — house rules (ET/RU/EN in `RULES`)
 - `site/404.dc.html` — 404
 - `site/support.js`, `site/image-slot.js`, `site/.image-slots.state.json` — design-tool runtime (reference only)
+
+
+## Update — 2026-10-17
+- **All client photos are now real files** in `site/assets/photos/<slot-id>.webp` (WebP, ≤1920px, q≈0.82) and referenced via `src` in the HTML. `assets/slots/` is obsolete. Crop offsets the client set (object-position) live in `.image-slots.state.json` (`x`,`y` in %) — apply them as `object-position` when porting.
+- **Gallery** now has 4 tabs: Väljas / Sees / Toad / Mets ja kalapüük (RU: Снаружи / Внутри / Комнаты / Лес и рыбалка). Desktop: 5-col grid (4-col <1100px), first item featured 2×2; mobile: 2×2 tab chips + horizontal snap scroller (touch + mouse-drag). Below: "Rohkem fotosid…" + Facebook button.
+- **YouTube video** now has native controls (play/pause/seek/fullscreen), autoplay muted.
+- **Hero**: minimal layout — H1 left, lead/links right, full-width photo filling the viewport, round CTA "Küsi vabu kuupäevi ↓" straddling the photo's top-right edge.
+- **About photo**: annotation pill "Me peidame end siin" + arrow pointing at the houses.
+- **Facebook**: https://www.facebook.com/p/Peipsi-resting-place-Liidia-Ltd-100083404779288/ (gallery CTA + footer; also `sameAs` in JSON-LD).
+- **SEO/social**: `assets/og-cover.jpg` (1200×630) as og:image, og:type/site_name/locale(+alternates), twitter:card, theme-color, apple-touch-icon (`assets/apple-touch-icon.png`), hero preload. House rules page has its own OG tags. In production: absolute URLs for og:image/hreflang/canonical; render ET meta server-side (currently static meta is RU and localised client-side).
+- Tap highlight / iOS callout / double-tap zoom disabled; pattern drift on all pages (45s per tile).

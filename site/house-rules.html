@@ -11,11 +11,19 @@
 <title>Правила проживания — Liidia</title>
 <meta name="description" content="Правила проживания в гостевом доме Liidia в Раннапунгерья: тишина, дети, баня, вода, общие помещения и безопасность.">
 <link rel="icon" type="image/svg+xml" href="assets/liidia-logo10-green.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#284B3C">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="Kodukord — Liidia Puhkemaja">
+<meta property="og:description" content="Liidia Puhkemaja kodukord: öörahu, lapsed, saun, vesi, ühisruumid ja ohutus.">
+<meta property="og:image" content="assets/og-cover.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth;scroll-padding-top:116px}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
 body{margin:0;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 a,button,[role="button"],summary{-webkit-touch-callout:none;touch-action:manipulation}
@@ -29,11 +37,11 @@ a:hover{color:#1B3529}
 <div style="min-height:100vh;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.65">
 
 <header style="position:{{ hdrPos }};top:0;z-index:40;background:rgba(246,243,236,.96);border-bottom:1px solid #D4D8CE">
-  <div style="padding:12px clamp(20px,4vw,48px);min-height:clamp(68px,8vw,84px);display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:wrap">
-    <a href="{{ homeHref }}" aria-label="Liidia"><img src="assets/liidia-logo11-green.svg" alt="Liidia — resting place" style="display:block;height:clamp(44px,5vw,54px);width:auto"></a>
+  <div style="position:relative;padding:12px clamp(20px,4vw,48px);min-height:clamp(68px,8vw,84px);display:flex;align-items:center;justify-content:space-between;gap:12px 16px;flex-wrap:nowrap">
+    <a href="{{ homeHref }}" style="display:inline-flex;flex:none;margin-left:-12px;align-items:center;gap:6px;height:44px;padding:0 12px;border-radius:8px;color:#222B25;text-decoration:none;font-weight:600;font-size:15px;transition:background-color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">← {{ t.back }}</a>
+    <a href="{{ homeHref }}" aria-label="Liidia" style="display:{{ logoDisp }};position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)"><img src="assets/liidia-logo11-green.svg" alt="Liidia — resting place" style="display:block;height:clamp(44px,5vw,54px);width:auto"></a>
     <div style="display:flex;align-items:center;gap:12px;margin-left:auto">
-      <a href="{{ homeHref }}" style="display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 12px;border-radius:8px;color:#222B25;text-decoration:none;font-weight:600;font-size:15px;transition:background-color .3s ease" style-hover="background:rgba(40,75,60,.09);color:#284B3C">← {{ t.back }}</a>
-      <div style="position:relative">
+        <div style="position:relative">
         <button type="button" onClick="{{ toggleLang }}" aria-haspopup="true" aria-expanded="{{ langExpanded }}" aria-label="{{ langBtnLabel }}" style="display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid #D4D8CE;border-radius:8px;background:#fff;color:#222B25;cursor:pointer;font:600 14px/1 Manrope,system-ui,sans-serif;letter-spacing:.04em;transition:border-color .18s" style-hover="border-color:#284B3C">
           <span aria-hidden="true" style="display:block;flex:none;width:22px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(34,43,37,.12);background:#E6EBE2 url({{ langFlag }}) center/cover no-repeat"></span>
           <span>{{ langCode }}</span>
@@ -93,8 +101,8 @@ a:hover{color:#1B3529}
       <div style="background:#E8DDCE;border-radius:14px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:20px">
         <h2 style="margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(24px,2.4vw,30px);line-height:1.2">{{ t.helpTitle }}</h2>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
-          <a href="tel:+37258152876" style="display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 24px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:background .2s" style-hover="background:#1B3529;color:#fff">{{ t.callAdmin }} +372 5815 2876</a>
-          <a href="tel:112" style="display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 24px;border-radius:7px;border:1.5px solid #9B5139;color:#7E4029;text-decoration:none;font-weight:700;font-size:16px;transition:background .2s" style-hover="background:#F6F3EC;color:#7E4029">{{ t.emergency }} 112</a>
+          <a href="tel:+37258152876" style="display:inline-flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 8px;min-height:54px;padding:10px 24px;white-space:nowrap;text-align:center;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:background .2s" style-hover="background:#1B3529;color:#fff"><span>{{ t.callAdmin }}</span><span>+372&nbsp;5815&nbsp;2876</span></a>
+          <a href="tel:112" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:54px;white-space:nowrap;padding:0 24px;border-radius:7px;border:1.5px solid #9B5139;color:#7E4029;text-decoration:none;font-weight:700;font-size:16px;transition:background .2s" style-hover="background:#F6F3EC;color:#7E4029">{{ t.emergency }} 112</a>
         </div>
       </div>
       <p style="margin:clamp(32px,4vw,48px) 0 0;font-family:Lora,Georgia,serif;font-style:italic;font-size:clamp(22px,2.2vw,28px);line-height:1.4;color:#284B3C;text-wrap:balance">{{ t.thanks }}</p>
@@ -103,10 +111,13 @@ a:hover{color:#1B3529}
 </main>
 
 
-<footer style="background:#222B25;color:#D4D8CE">
-  <div style="padding:32px clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:14px">
-    <img src="assets/liidia-logo-light.svg" alt="Liidia" style="display:block;height:40px;width:auto">
-    <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
+<footer style="background:#222B25;color:#fff">
+  <div style="width:100%;padding:{{ footPt }} clamp(20px,4vw,48px) 32px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:32px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px">
+      <img src="assets/liidia-logo-light.svg" alt="Liidia" style="display:block;height:48px;width:auto">
+      <p style="margin:0;font-size:15px;color:#D4D8CE;white-space:nowrap">{{ t.tagline }}</p>
+    </div>
+    <div style="flex:1 1 100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:#D4D8CE;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)">
       <p style="margin:0">© {{ year }} {{ t.footerName }}</p>
       <p style="margin:0">Designed by <a href="https://sanya-boss.github.io/portfolio/" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;transition:color .25s ease" style-hover="color:#E8DDCE">Mežennõi</a></p>
     </div>
@@ -120,7 +131,7 @@ const IDS = ['music', 'kids', 'clean', 'fire', 'sauna', 'water', 'property', 'pe
 
 const RULES = {
   ru: {
-    docTitle: 'Правила проживания — Liidia', footerName: 'Гостевой дом Liidia', back: 'На главную', langLabel: 'Язык', toc: 'Содержание', eyebrow: 'Гостевой дом Liidia',
+    docTitle: 'Правила проживания — Liidia', footerName: 'Гостевой дом Liidia', tagline: 'Гостевой дом у реки Раннапунгерья', back: 'На главную', langLabel: 'Язык', toc: 'Содержание', eyebrow: 'Гостевой дом Liidia',
     title: 'Правила проживания',
     intro: 'Мы хотим, чтобы отдых в Liidia был приятным и комфортным для всех гостей. Просим соблюдать чистоту, бережно относиться к имуществу, уважать окружающих и придерживаться этих правил.',
     source: 'Текст закона на Riigi Teataja ↗', helpTitle: 'Если что-то случилось', callAdmin: 'Администрация', emergency: 'Экстренная помощь',
@@ -180,7 +191,7 @@ const RULES = {
     ]
   },
   et: {
-    docTitle: 'Kodukord — Liidia', footerName: 'Liidia Puhkemaja', back: 'Avalehele', langLabel: 'Keel', toc: 'Sisukord', eyebrow: 'Liidia Puhkemaja',
+    docTitle: 'Kodukord — Liidia', footerName: 'Liidia Puhkemaja', tagline: 'Puhkemaja Rannapungerja jõe ääres', back: 'Avalehele', langLabel: 'Keel', toc: 'Sisukord', eyebrow: 'Liidia Puhkemaja',
     title: 'Kodukord',
     intro: 'Soovime, et puhkus Liidias oleks meeldiv ja mugav kõigile külalistele. Palume hoida puhtust, kohelda vara hoolikalt, arvestada teistega ja järgida neid reegleid.',
     source: 'Seaduse tekst Riigi Teatajas ↗', helpTitle: 'Kui midagi juhtus', callAdmin: 'Administratsioon', emergency: 'Hädaabi',
@@ -240,7 +251,7 @@ const RULES = {
     ]
   },
   en: {
-    docTitle: 'House rules — Liidia', footerName: 'Liidia Guest House', back: 'Back to home', langLabel: 'Language', toc: 'Contents', eyebrow: 'Liidia guest house',
+    docTitle: 'House rules — Liidia', footerName: 'Liidia Guest House', tagline: 'Guest house on the Rannapungerja river', back: 'Back to home', langLabel: 'Language', toc: 'Contents', eyebrow: 'Liidia guest house',
     title: 'House rules',
     intro: 'We want your stay at Liidia to be pleasant and comfortable for every guest. Please keep things clean, treat the property with care, be considerate of others and follow these rules.',
     source: 'Read the law on Riigi Teataja ↗', helpTitle: 'If something happens', callAdmin: 'Staff', emergency: 'Emergency',
@@ -310,6 +321,9 @@ class Component extends DCLogic {
     active: IDS[0]
   };
   componentDidMount() {
+    [300, 1500].forEach((t) => setTimeout(() => this.startDrift(), t));
+    this.driftResize = () => { clearTimeout(this.driftT); this.driftT = setTimeout(() => this.startDrift(), 300); };
+    window.addEventListener('resize', this.driftResize);
     this.onKey = (e) => { if (e.key === 'Escape') this.setState({ langOpen: false }); };
     this.onDown = (e) => { if (this.state.langOpen && !e.target.closest('[aria-haspopup]') && !e.target.closest('[role="menu"]')) this.setState({ langOpen: false }); };
     window.addEventListener('keydown', this.onKey);
@@ -323,7 +337,22 @@ class Component extends DCLogic {
     this.syncDoc();
   }
   componentDidUpdate() { this.syncDoc(); }
-  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); document.removeEventListener('pointerdown', this.onDown); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
+  startDrift() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.drifts = this.drifts || []; this.driftSeen = this.driftSeen || new WeakSet();
+    document.querySelectorAll('[style*="liidia-pattern"]').forEach((el) => {
+      if (!el.animate || this.driftSeen.has(el)) return;
+      const vertical = (el.getAttribute('style') || '').indexOf('sand-v') >= 0;
+      const r = el.getBoundingClientRect();
+      const size = vertical ? r.width : r.height;
+      if (!size) return;
+      const tile = Math.round(size * 433 / 520);
+      const prop = vertical ? 'backgroundPositionY' : 'backgroundPositionX';
+      this.driftSeen.add(el);
+      this.drifts.push(el.animate([{ [prop]: '0px' }, { [prop]: (vertical ? tile : -tile) + 'px' }], { duration: 45000, iterations: Infinity, easing: 'linear' }));
+    });
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.driftResize); (this.drifts || []).forEach((a) => a.cancel()); window.removeEventListener('keydown', this.onKey); document.removeEventListener('pointerdown', this.onDown); window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); }
   syncDoc() { document.documentElement.lang = this.state.lang; document.title = RULES[this.state.lang].docTitle; }
   setLang = (code) => () => {
     try { localStorage.setItem('liidia-lang', code); } catch (e) {}
@@ -336,7 +365,7 @@ class Component extends DCLogic {
     return {
       t: T,
       homeHref: './?lang=' + s.lang,
-      showToc: s.w >= 960, hdrPos: s.w >= 960 ? 'sticky' : 'relative',
+      footPt: s.w < 960 ? '44px' : '56px', logoDisp: s.w < 440 ? 'none' : 'block', showToc: s.w >= 960, hdrPos: 'sticky',
       year: new Date().getFullYear(),
       langs: LANGS.map((l) => ({ ...l, pressed: l.code === s.lang ? 'true' : 'false', bg: l.code === s.lang ? '#F6F3EC' : 'transparent', fg: l.code === s.lang ? '#284B3C' : '#62685E', pick: this.setLang(l.code) })),
       toggleLang: () => this.setState({ langOpen: !s.langOpen }), langCode: s.lang.toUpperCase(), langFlag: (LANGS.find((l) => l.code === s.lang) || LANGS[0]).flag, langBtnLabel: (LANGS.find((l) => l.code === s.lang) || LANGS[0]).name,
