@@ -12,12 +12,25 @@
 <title>Гостевой дом Liidia — отдых в Раннапунгерья</title>
 <meta name="description" content="Гостевой дом Liidia на берегу реки Раннапунгерья: размещение от 55 € за ночь, баня с купелью и отдых для компаний. Пляж Каукси — в 4 км.">
 <meta property="og:title" content="Liidia — ваши выходные у реки">
-<meta property="og:image" content="assets/liidia-hero.webp">
+<meta property="og:image" content="assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Liidia Puhkemaja — Rannapungerja jõe ääres">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Liidia Puhkemaja">
+<meta property="og:locale" content="et_EE">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#284B3C">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/liidia-hero.webp" fetchpriority="high">
 <link rel="alternate" hreflang="et" href="?lang=et">
 <link rel="alternate" hreflang="ru" href="?lang=ru">
 <link rel="alternate" hreflang="en" href="?lang=en">
 <link rel="alternate" hreflang="x-default" href="?lang=et">
-<script type="application/ld+json">{ "@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Liidia", "description": "Guest house on the Rannapungerja river near Lake Peipus. Rooms for 2–4 guests, up to 40 beds, sauna with hot tub.", "telephone": "+372 5815 2876", "priceRange": "55–85 €", "image": "assets/liidia-hero.webp", "address": { "@type": "PostalAddress", "addressLocality": "Rannapungerja", "postalCode": "42208", "addressRegion": "Ida-Virumaa", "addressCountry": "EE" }, "amenityFeature": [ { "@type": "LocationFeatureSpecification", "name": "Sauna", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Shared kitchen", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Barbecue area", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Playground", "value": true } ] }</script>
+<script type="application/ld+json">{ "@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Liidia", "description": "Guest house on the Rannapungerja river near Lake Peipus. Rooms for 2–4 guests, up to 40 beds, sauna with hot tub.", "telephone": "+372 5815 2876", "priceRange": "55–85 €", "image": ["assets/og-cover.jpg", "assets/liidia-hero.webp"], "sameAs": ["https://www.facebook.com/p/Peipsi-resting-place-Liidia-Ltd-100083404779288/"],  "address": { "@type": "PostalAddress", "addressLocality": "Rannapungerja", "postalCode": "42208", "addressRegion": "Ida-Virumaa", "addressCountry": "EE" }, "amenityFeature": [ { "@type": "LocationFeatureSpecification", "name": "Sauna", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Shared kitchen", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Barbecue area", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Playground", "value": true } ] }</script>
 <meta property="og:description" content="Гостевой дом в Раннапунгерья: отдых на природе, размещение для семей и компаний, баня и купель.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -118,45 +131,45 @@ a:hover{color:#1B3529}
 
 <main id="top">
 
-<section aria-labelledby="hero-title" style="width:100%;padding:clamp(40px,6vw,72px) clamp(20px,4vw,48px) 0">
-  <div style="position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(24px,4vw,64px);align-items:end">
-    <div aria-hidden="true" style="display:{{ heroPatDesk }};position:absolute;z-index:-1;top:28px;height:clamp(110px,11vw,170px);left:calc(-1 * clamp(20px,4vw,48px));right:calc(-1 * clamp(20px,4vw,48px));pointer-events:none"></div>
-    <div style="min-width:0">
-      <p style="margin:0 0 20px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">Раннапунгерья · Эстония</p>
-      <h1 id="hero-title" style="position:relative;isolation:isolate;margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(42px,6.4vw,86px);line-height:1.04;letter-spacing:-.02em;text-wrap:balance"><span aria-hidden="true" style="display:{{ heroPatMob }};position:absolute;z-index:-1;top:calc(50% - 60px);height:120px;left:calc(-1 * clamp(20px,4vw,48px));right:calc(-1 * clamp(20px,4vw,48px));pointer-events:none"><span style="display:block;width:100%;height:100%;background:url(assets/liidia-pattern-green.png) repeat-x center/auto 100%;opacity:.07"></span></span>Ваши выходные <span style="font-style:italic;color:#284B3C">в&nbsp;гостевом доме Liidia</span></h1>
+<section aria-labelledby="hero-title" style="width:100%;min-height:calc(100svh - clamp(68px,8vw,84px));display:flex;flex-direction:column;gap:clamp(78px,calc(5.5vw + 16px),98px);padding:clamp(28px,min(5vw,6svh),72px) clamp(20px,4vw,48px) clamp(20px,2vw,32px)">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px clamp(32px,6vw,96px)">
+    <div style="flex:1 1 560px;min-width:0">
+      <p style="margin:0 0 clamp(16px,2svh,24px);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">Раннапунгерья · Эстония</p>
+      <h1 id="hero-title" style="margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(40px,min(6.4vw,10svh),104px);line-height:1;letter-spacing:-.03em;color:#222B25;text-wrap:balance">Ваши выходные <span style="font-style:italic;color:#284B3C">в&nbsp;гостевом доме Liidia</span></h1>
     </div>
-    <div style="min-width:0;width:100%;max-width:clamp(480px,38vw,680px);padding-bottom:8px;justify-self:end">
-      <p style="margin:0 0 28px;font-size:clamp(18px,1.3vw,21px);line-height:1.6;color:#222B25;text-wrap:pretty">Отдых на берегу реки Раннапунгерья, рядом с Чудским озером. Приезжайте вдвоём, с семьёй или компанией — гулять, рыбачить и проводить время вместе.</p>
-      <div ref="{{ heroCtaRef }}" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
-        <a href="#contacts" onClick="{{ pickNone }}" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:7px;background:#284B3C;color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:background .18s" style-hover="background:#1B3529;color:#fff">Уточнить свободные даты</a>
-        <a href="#rooms" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#284B3C;font-weight:600;font-size:16px;text-underline-offset:5px">Посмотреть размещение</a>
+    <div style="flex:0 1 400px;min-width:0;display:flex;flex-direction:column;gap:16px">
+      <p style="margin:0;font-size:16px;line-height:1.6;color:#3A4237;text-wrap:pretty">Отдых на берегу реки Раннапунгерья, рядом с Чудским озером. Приезжайте вдвоём, с семьёй или компанией — гулять, рыбачить и проводить время вместе.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:16px;border-top:1px solid #D4D8CE">
+        <a href="#rooms" style="display:inline-flex;align-items:center;min-height:44px;color:#284B3C;font-weight:600;font-size:15px;text-decoration:none;transition:color .25s ease" style-hover="color:#1B3529">Посмотреть размещение →</a>
+        <p style="margin:0;font-size:15px;color:#62685E">Размещение от <strong style="color:#222B25;font-weight:700">55&nbsp;€</strong> за&nbsp;ночь</p>
       </div>
-      <p style="margin:20px 0 0;font-size:15px;color:#62685E">Размещение от <strong style="color:#222B25;font-weight:700">55&nbsp;€</strong> за&nbsp;ночь</p>
     </div>
   </div>
-  <figure style="margin:clamp(32px,4vw,48px) 0 0">
-    <div style="position:relative;width:100%;aspect-ratio:16/8;min-height:260px;max-height:clamp(320px,40vw,620px);border-radius:12px;overflow:hidden;background:#E8DDCE">
+  <div style="position:relative;flex:1 1 auto;min-height:clamp(260px,40svh,360px)">
+    <div style="position:absolute;inset:0;border-radius:12px;overflow:hidden;background:#E8DDCE">
       <image-slot id="liidia-hero" shape="rounded" radius="12" src="assets/liidia-hero.webp" placeholder="Гостевой дом Liidia с высоты"></image-slot>
     </div>
-    <figcaption style="margin-top:12px;font-size:14px;color:#62685E">Гостевой дом Liidia · Раннапунгерья</figcaption>
-  </figure>
+    <div ref="{{ heroCtaRef }}" style="position:absolute;z-index:2;right:clamp(16px,4vw,64px);top:calc(-1 * clamp(62px,5.5vw,82px))">
+      <a href="#contacts" onClick="{{ pickNone }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:clamp(124px,11vw,164px);height:clamp(124px,11vw,164px);border-radius:50%;background:#284B3C;color:#fff;text-decoration:none;text-align:center;font-weight:700;font-size:clamp(14px,1vw,16px);line-height:1.25;padding:20px;box-shadow:0 0 0 clamp(6px,.6vw,10px) #F6F3EC;transition:background .25s ease,transform .4s cubic-bezier(.2,.7,.2,1)" style-hover="background:#1B3529;color:#fff;transform:rotate(-8deg) scale(1.04)">Уточнить свободные даты<span aria-hidden="true" style="font-size:20px;line-height:1">↓</span></a>
+    </div>
+  </div>
 </section>
 
 <section aria-label="Коротко о главном" style="width:100%;padding:clamp(32px,4vw,48px) clamp(20px,4vw,48px) 0">
-  <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));border-top:1px solid #D4D8CE;border-bottom:1px solid #D4D8CE">
-    <div style="padding:24px 24px 24px 0;border-right:1px solid #D4D8CE">
+  <dl style="margin:0;display:grid;grid-template-columns:{{ factCols }};border-top:1px solid #D4D8CE;border-bottom:1px solid #D4D8CE">
+    <div style="min-width:0;padding:24px {{ fPadR }} 24px 0;border-bottom:{{ fBorderB }}">
       <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">На берегу реки</dt>
       <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Раннапунгерья</dd>
     </div>
-    <div style="padding:24px;border-right:1px solid #D4D8CE">
+    <div style="min-width:0;padding:24px {{ fPadR }} 24px {{ fPadR }};border-left:1px solid #D4D8CE;border-bottom:{{ fBorderB }}">
       <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">4&nbsp;км до&nbsp;пляжа</dt>
       <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Пляж Каукси</dd>
     </div>
-    <div style="padding:24px;border-right:1px solid #D4D8CE">
+    <div style="min-width:0;padding:24px {{ fPadR }} 24px {{ f3pl }};border-left:{{ f3bl }}">
       <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">От 55&nbsp;€ / ночь</dt>
       <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Размещение на двоих</dd>
     </div>
-    <div style="padding:24px">
+    <div style="min-width:0;padding:24px {{ fPadR }} 24px {{ fPadR }};border-left:1px solid #D4D8CE">
       <dt style="font-family:Lora,Georgia,serif;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2">До 40 спальных мест</dt>
       <dd style="margin:6px 0 0;font-size:15px;color:#62685E">Для семей и компаний</dd>
     </div>
@@ -166,7 +179,11 @@ a:hover{color:#1B3529}
 <section id="about" aria-labelledby="about-title" style="width:100%;padding:clamp(64px,9vw,120px) clamp(20px,4vw,48px) 0">
   <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,96px);align-items:center">
     <div style="flex:1 1 400px;min-width:0;position:relative;aspect-ratio:4/3;max-height:clamp(340px,38vw,560px);border-radius:12px;overflow:hidden;background:#E8DDCE">
-      <image-slot id="liidia-about" src="assets/slots/liidia-about.webp" shape="rounded" radius="12" placeholder="Река Раннапунгерья у домов"></image-slot>
+      <image-slot id="liidia-about" shape="rounded" radius="12" src="assets/photos/liidia-about.webp" placeholder="Река Раннапунгерья у домов"></image-slot>
+      <div style="position:absolute;z-index:2;left:44.8%;bottom:60.7%;display:flex;flex-direction:column;align-items:flex-start;pointer-events:none">
+        <span style="margin:0 0 2px clamp(34px,3.4vw,52px);padding:6px 14px 7px;border-radius:999px;background:rgba(31,61,48,.92);box-shadow:0 4px 14px rgba(0,0,0,.25);font-family:Lora,Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(15px,1.4vw,20px);line-height:1.2;color:#fff;white-space:nowrap">Мы прячемся здесь</span>
+        <svg aria-hidden="true" width="64" height="56" viewBox="0 0 64 56" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display:block;width:clamp(40px,4vw,64px);height:auto;overflow:visible"><g stroke="#1F3D30" stroke-opacity=".92" stroke-width="8"><path d="M58 4C46 20 28 36 6 50"></path><path d="M6 50l16-2"></path><path d="M6 50l4-15"></path></g><g stroke="#fff" stroke-width="2.8"><path d="M58 4C46 20 28 36 6 50"></path><path d="M6 50l16-2"></path><path d="M6 50l4-15"></path></g></svg>
+      </div>
     </div>
     <div style="flex:0 1 clamp(480px,38vw,680px);margin-left:auto;min-width:0;">
       <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9B5139">О Liidia</p>
@@ -255,7 +272,7 @@ a:hover{color:#1B3529}
   <div aria-hidden="true" style="position:absolute;z-index:-1;top:0;bottom:0;left:{{ saunaPatLeft }};width:clamp(110px,11vw,170px);background:url(assets/liidia-pattern-sand-v.png) repeat-y center top/100% auto;pointer-events:none"></div>
   <div style="width:100%;padding:clamp(56px,8vw,112px) clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;gap:clamp(32px,6vw,96px);align-items:center">
     <div style="flex:1 1 400px;min-width:0;position:relative;aspect-ratio:4/3;max-height:clamp(320px,34vw,520px);border-radius:12px;overflow:hidden;background:#2A190F">
-      <image-slot id="liidia-sauna" src="assets/slots/liidia-sauna.webp" shape="rounded" radius="12" placeholder="Реальное фото бани или купели"></image-slot>
+      <image-slot id="liidia-sauna" shape="rounded" radius="12" src="assets/photos/liidia-sauna.webp" placeholder="Реальное фото бани или купели"></image-slot>
     </div>
     <div style="flex:0 1 clamp(480px,38vw,680px);margin-left:auto;min-width:0;">
       <p style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#E3B98F">Отдых в своём ритме</p>
@@ -328,31 +345,116 @@ a:hover{color:#1B3529}
     <h2 id="gal-title" style="flex:1 1 400px;min-width:0;margin:0;font-family:Lora,Georgia,serif;font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance">Познакомьтесь с Liidia поближе</h2>
     <p style="flex:0 1 clamp(480px,38vw,680px);margin-left:auto;min-width:0;margin-top:0;margin-bottom:0;text-wrap:pretty">Посмотрите на дом и пространство для отдыха, чтобы представить свою поездку.</p>
   </div>
-  <div ref="{{ galRef }}" onClick="{{ openLb }}" style="display:flex;flex-direction:column;gap:16px">
-  <div style="display:{{ galRowDisplay }};flex-wrap:wrap;gap:16px">
-    <figure style="order:0;margin:0;flex:2 1 420px;min-width:0;min-height:{{ vidMinH }};aspect-ratio:{{ vidAR }};align-self:stretch;position:relative;border-radius:10px;overflow:hidden;background:#222B25 url(https://i.ytimg.com/vi/aGRQcjyf5hg/hqdefault.jpg) center/cover no-repeat;container-type:size">
-      <sc-if value="{{ vidReady }}" hint-placeholder-val="{{ false }}"><iframe src="https://www.youtube-nocookie.com/embed/aGRQcjyf5hg?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=aGRQcjyf5hg&amp;controls=0&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="Видео: гостевой дом Liidia" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1" style="position:absolute;top:50%;left:50%;width:max(100cqw,177.78cqh);height:max(100cqh,56.25cqw);transform:translate(-50%,-50%);border:0;pointer-events:none"></iframe></sc-if>
-    </figure>
-    <div style="order:2;flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:16px">
-    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
-      <image-slot id="liidia-gal-2" src="assets/slots/liidia-gal-2.webp" shape="rounded" radius="10" placeholder="Гости за столом у дома"></image-slot>
-    </figure>
-    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
-      <image-slot id="liidia-gal-3" shape="rounded" radius="10" src="assets/liidia-gal-trampoline.webp" placeholder="Батут на территории"></image-slot>
-    </figure>
+  <div ref="{{ galRef }}" onClick="{{ openLb }}">
+  <div role="tablist" aria-label="Разделы галереи" style="display:{{ tabsDisp }};grid-template-columns:repeat(2,minmax(0,1fr));flex-wrap:nowrap;gap:{{ tabsGap }};padding:{{ tabsPad }};margin:0 0 clamp(20px,2.4vw,28px);border:{{ tabsBd }};border-radius:{{ tabsR }};background:{{ tabsBg }};width:{{ tabsW }};max-width:100%">
+    <sc-for list="{{ galTabs }}" as="g" hint-placeholder-count="3">
+      <button type="button" role="tab" aria-selected="{{ g.sel }}" onClick="{{ g.pick }}" style="flex:{{ tabFlex }};min-width:0;white-space:nowrap;height:44px;padding:0 clamp(10px,2vw,24px);border:{{ g.bd }};border-radius:{{ tabR }};cursor:pointer;font:600 clamp(14px,1.1vw,15px)/1 Manrope,system-ui,sans-serif;background:{{ g.bg }};color:{{ g.fg }};transition:background-color .3s ease,color .3s ease">{{ g.label }}</button>
+    </sc-for>
+  </div>
+  <sc-if value="{{ galT0 }}" hint-placeholder-val="{{ true }}">
+    <div role="tabpanel" onMouseDown="{{ galDragStart }}" onDragStart="{{ galNoDrag }}" style="display:{{ gDisp }};grid-template-columns:repeat({{ gCols }},minmax(0,1fr));gap:{{ gGap }};overflow-x:{{ gOvf }};overflow-y:hidden;scroll-snap-type:{{ gSnap }};margin:{{ gMargin }};padding:{{ gPad }};scroll-padding:{{ gScrollPad }};overscroll-behavior-x:contain;touch-action:pan-x pan-y;scrollbar-width:none;cursor:{{ gCursor }};user-select:none">
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;min-width:0;grid-column:{{ featCol }};grid-row:{{ featRow }};aspect-ratio:{{ featAR }};flex:{{ itemFlex }};scroll-snap-align:start;background:#222B25 url(https://i.ytimg.com/vi/aGRQcjyf5hg/hqdefault.jpg) center/cover no-repeat;container-type:size">
+        <sc-if value="{{ vidReady }}" hint-placeholder-val="{{ false }}"><iframe src="https://www.youtube-nocookie.com/embed/aGRQcjyf5hg?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=aGRQcjyf5hg&amp;controls=1&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="Видео: гостевой дом Liidia" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></sc-if>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-gal-2" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-gal-2.webp" placeholder="Гости за столом у дома"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-gal-3" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/liidia-gal-trampoline.webp" placeholder="Батут на территории"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-gal-4" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-gal-4.webp" placeholder="Изгиб реки"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-gal-5" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-gal-5.webp" placeholder="Каяк на реке"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-gal-6" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-gal-6.webp" placeholder="Дом и подъезд среди сосен"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-gal-7" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-gal-7.webp" placeholder="Фото территории"></image-slot>
+      </figure>
     </div>
+  </sc-if>
+  <sc-if value="{{ galT1 }}" hint-placeholder-val="{{ false }}">
+    <div role="tabpanel" onMouseDown="{{ galDragStart }}" onDragStart="{{ galNoDrag }}" style="display:{{ gDisp }};grid-template-columns:repeat({{ gCols }},minmax(0,1fr));gap:{{ gGap }};overflow-x:{{ gOvf }};overflow-y:hidden;scroll-snap-type:{{ gSnap }};margin:{{ gMargin }};padding:{{ gPad }};scroll-padding:{{ gScrollPad }};overscroll-behavior-x:contain;touch-action:pan-x pan-y;scrollbar-width:none;cursor:{{ gCursor }};user-select:none">
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;grid-column:{{ featCol }};grid-row:{{ featRow }};aspect-ratio:{{ featAR }};flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-in-1" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-in-1.webp" placeholder="Кухня для гостей"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-in-2" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-in-2.webp" placeholder="Обеденный зал"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-in-3" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-in-3.webp" placeholder="Душевые и туалеты"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-in-4" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-in-4.webp" placeholder="Фото интерьера"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-in-5" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-in-5.webp" placeholder="Фото интерьера"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-in-6" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-in-6.webp" placeholder="Фото интерьера"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-in-7" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-in-7.webp" placeholder="Фото интерьера"></image-slot>
+      </figure>
+    </div>
+  </sc-if>
+  <sc-if value="{{ galT2 }}" hint-placeholder-val="{{ false }}">
+    <div role="tabpanel" onMouseDown="{{ galDragStart }}" onDragStart="{{ galNoDrag }}" style="display:{{ gDisp }};grid-template-columns:repeat({{ gCols }},minmax(0,1fr));gap:{{ gGap }};overflow-x:{{ gOvf }};overflow-y:hidden;scroll-snap-type:{{ gSnap }};margin:{{ gMargin }};padding:{{ gPad }};scroll-padding:{{ gScrollPad }};overscroll-behavior-x:contain;touch-action:pan-x pan-y;scrollbar-width:none;cursor:{{ gCursor }};user-select:none">
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;grid-column:{{ featCol }};grid-row:{{ featRow }};aspect-ratio:{{ featAR }};flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-room-1" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-room-1.webp" placeholder="Комната на двоих"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-room-2" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-room-2.webp" placeholder="Комната на троих"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-room-3" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-room-3.webp" placeholder="Комната на четверых"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-room-4" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-room-4.webp" placeholder="Фото комнаты"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-room-5" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-room-5.webp" placeholder="Фото комнаты"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-room-6" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-room-6.webp" placeholder="Фото комнаты"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-room-7" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-room-7.webp" placeholder="Фото комнаты"></image-slot>
+      </figure>
+    </div>
+  </sc-if>
+  <sc-if value="{{ galT3 }}" hint-placeholder-val="{{ false }}">
+    <div role="tabpanel" onMouseDown="{{ galDragStart }}" onDragStart="{{ galNoDrag }}" style="display:{{ gDisp }};grid-template-columns:repeat({{ gCols }},minmax(0,1fr));gap:{{ gGap }};overflow-x:{{ gOvf }};overflow-y:hidden;scroll-snap-type:{{ gSnap }};margin:{{ gMargin }};padding:{{ gPad }};scroll-padding:{{ gScrollPad }};overscroll-behavior-x:contain;touch-action:pan-x pan-y;scrollbar-width:none;cursor:{{ gCursor }};user-select:none">
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;grid-column:{{ featCol }};grid-row:{{ featRow }};aspect-ratio:{{ featAR }};flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-forest-1" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-forest-1.webp" placeholder="Рыбалка на реке"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-forest-2" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-forest-2.webp" placeholder="Лес рядом с домом"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-forest-3" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-forest-3.webp" placeholder="Утро у воды"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-forest-4" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-forest-4.webp" placeholder="Тропинка в лесу"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-forest-5" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-forest-5.webp" placeholder="Улов"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-forest-6" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-forest-6.webp" placeholder="Река с берега"></image-slot>
+      </figure>
+      <figure style="margin:0;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;min-width:0;aspect-ratio:4/3;flex:{{ itemFlex }};scroll-snap-align:start">
+        <image-slot id="liidia-forest-7" shape="rounded" radius="10" style="position:absolute;inset:0;width:100%;height:100%" src="assets/photos/liidia-forest-7.webp" placeholder="Сосны у дома"></image-slot>
+      </figure>
+    </div>
+  </sc-if>
   </div>
-  <div style="order:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">
-    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
-      <image-slot id="liidia-gal-4" src="assets/slots/liidia-gal-4.webp" shape="rounded" radius="10" placeholder="Изгиб реки"></image-slot>
-    </figure>
-    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
-      <image-slot id="liidia-gal-5" src="assets/slots/liidia-gal-5.webp" shape="rounded" radius="10" placeholder="Каяк на реке"></image-slot>
-    </figure>
-    <figure style="margin:0;aspect-ratio:4/3;position:relative;border-radius:10px;overflow:hidden;background:#E8DDCE;cursor:zoom-in">
-      <image-slot id="liidia-gal-6" src="assets/slots/liidia-gal-6.webp" shape="rounded" radius="10" placeholder="Дом и подъезд среди сосен"></image-slot>
-    </figure>
-  </div>
+  <div style="margin-top:clamp(20px,2.4vw,28px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-top:clamp(20px,2.4vw,28px);border-top:1px solid #D4D8CE">
+    <p style="margin:0;font-size:16px;color:#3A4237">Больше фотографий — на нашей странице</p>
+    <a href="https://www.facebook.com/p/Peipsi-resting-place-Liidia-Ltd-100083404779288/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 22px;border-radius:7px;border:1.5px solid #284B3C;color:#284B3C;text-decoration:none;font-weight:600;font-size:16px;background-color:rgba(40,75,60,0);transition:background-color .3s ease,color .3s ease" style-hover="background-color:#284B3C;color:#fff"><span aria-hidden="true" style="flex:none;width:18px;height:18px;background-color:currentColor;transition:background-color .3s ease;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/facebook.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/facebook.svg) center/contain no-repeat"></span>Facebook ↗</a>
   </div>
 </section>
 
@@ -400,10 +502,10 @@ a:hover{color:#1B3529}
         <button type="button" onClick="{{ copyPhone }}" style="height:54px;padding:0 22px;border-radius:7px;border:1.5px solid #284B3C;background:transparent;color:#284B3C;font:600 16px Manrope,system-ui,sans-serif;cursor:pointer;transition:background .18s" style-hover="background:#F6F3EC">Скопировать номер</button>
         <span role="status" aria-live="polite" style="font-size:15px;font-weight:600;color:#284B3C">{{ copyMsg }}</span>
       </div>
-      <div style="margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px">
+      <div style="margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px">
         <span style="font-size:15px;color:#62685E">Или напишите:</span>
-        <a href="https://wa.me/37258152876" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:7px;background:#F6F3EC;border:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-weight:600;font-size:15px;transition:border-color .2s" style-hover="border-color:#284B3C;color:#222B25"><span aria-hidden="true" style="width:18px;height:18px;background:#284B3C;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg) center/contain no-repeat"></span>WhatsApp</a>
-        <a href="viber://chat?number=%2B37258152876" style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:7px;background:#F6F3EC;border:1px solid #D4D8CE;color:#222B25;text-decoration:none;font-weight:600;font-size:15px;transition:border-color .2s" style-hover="border-color:#284B3C;color:#222B25"><span aria-hidden="true" style="width:18px;height:18px;background:#284B3C;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/viber.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/viber.svg) center/contain no-repeat"></span>Viber</a>
+        <a href="https://wa.me/37258152876" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;color:#284B3C;text-decoration:none;transition:background-color .25s ease,color .25s ease" style-hover="background:rgba(40,75,60,.1);color:#1B3529"><span aria-hidden="true" style="width:28px;height:28px;background:currentColor;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg) center/contain no-repeat"></span></a>
+        <a href="viber://chat?number=%2B37258152876" aria-label="Viber" title="Viber" style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;color:#284B3C;text-decoration:none;transition:background-color .25s ease,color .25s ease" style-hover="background:rgba(40,75,60,.1);color:#1B3529"><span aria-hidden="true" style="width:28px;height:28px;background:currentColor;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/viber.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/viber.svg) center/contain no-repeat"></span></a>
       </div>
     </div>
     <div style="min-width:0;align-self:stretch;background:#F6F3EC;border-radius:10px;overflow:hidden;display:flex;flex-direction:column">
@@ -431,10 +533,11 @@ a:hover{color:#1B3529}
 
 
 <footer style="background:#222B25;color:#fff">
-  <div style="width:100%;padding:56px clamp(20px,4vw,48px) calc(40px + {{ barPad }});display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:32px">
+  <div style="width:100%;padding:{{ footPt }} clamp(20px,4vw,48px) calc(32px + {{ barPad }});display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:32px">
     <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px">
       <img src="assets/liidia-logo-light.svg" alt="Liidia" style="display:block;height:48px;width:auto">
       <p style="margin:0;font-size:15px;color:#D4D8CE;white-space:nowrap">Гостевой дом у реки Раннапунгерья</p>
+      <a href="https://www.facebook.com/p/Peipsi-resting-place-Liidia-Ltd-100083404779288/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="margin-top:4px;display:inline-flex;align-items:center;gap:10px;min-height:44px;color:#fff;text-decoration:none;font-size:15px;transition:color .25s ease" style-hover="color:#E8DDCE"><span aria-hidden="true" style="flex:none;width:20px;height:20px;background:currentColor;-webkit-mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/facebook.svg) center/contain no-repeat;mask:url(https://cdn.jsdelivr.net/npm/simple-icons@13/icons/facebook.svg) center/contain no-repeat"></span>Facebook</a>
     </div>
     <nav aria-label="Дополнительная навигация" style="display:flex;flex-wrap:wrap;gap:8px 32px;font-size:15px;white-space:nowrap;margin-left:{{ footNavMl }}">
       <a href="#rooms" style="color:#fff;text-decoration:none;transition:color .25s ease" style-hover="color:#E8DDCE">Размещение</a>
@@ -450,7 +553,7 @@ a:hover{color:#1B3529}
 
 <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
   <div ref="{{ lbRef }}" role="dialog" aria-modal="true" aria-label="Просмотр фото" onClick="{{ lbBackdrop }}" onTouchStart="{{ lbTouchStart }}" onTouchEnd="{{ lbTouchEnd }}" style="position:fixed;inset:0;z-index:100;background:rgba(20,26,22,.94);display:flex;align-items:center;justify-content:center;padding:clamp(72px,8vw,96px) clamp(12px,8vw,120px)">
-    <img alt="" style="display:block;max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 24px 64px rgba(0,0,0,.45)">
+    {{ lbImg }}
     <button type="button" ref="{{ lbCloseRef }}" onClick="{{ lbClose }}" aria-label="Закрыть" style="position:absolute;top:16px;right:16px;border:0;border-radius:50%;width:52px;height:52px;display:grid;place-items:center;background:rgba(246,243,236,.12);color:#fff;cursor:pointer;transition:background .2s" style-hover="background:rgba(246,243,236,.24)"><span aria-hidden="true" style="width:22px;height:22px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/x.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/x.svg) center/contain no-repeat"></span></button>
     <button type="button" onClick="{{ lbPrev }}" aria-label="Предыдущее фото" style="position:absolute;left:16px;top:calc(50% - 26px);border:0;border-radius:50%;width:52px;height:52px;display:grid;place-items:center;background:rgba(246,243,236,.12);color:#fff;cursor:pointer;transition:background .2s" style-hover="background:rgba(246,243,236,.24)"><span aria-hidden="true" style="width:24px;height:24px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-left.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-left.svg) center/contain no-repeat"></span></button>
     <button type="button" onClick="{{ lbNext }}" aria-label="Следующее фото" style="position:absolute;right:16px;top:calc(50% - 26px);border:0;border-radius:50%;width:52px;height:52px;display:grid;place-items:center;background:rgba(246,243,236,.12);color:#fff;cursor:pointer;transition:background .2s" style-hover="background:rgba(246,243,236,.24)"><span aria-hidden="true" style="width:24px;height:24px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-right.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.460.0/icons/chevron-right.svg) center/contain no-repeat"></span></button>
@@ -650,10 +753,35 @@ const DICT = {
   'Гостевой дом Liidia': ['Liidia Puhkemaja', 'Liidia Guest House'],
   'Быстрый звонок': ['Kiirkõne', 'Quick call'],
   'Правила проживания': ['Kodukord', 'House rules'],
+  'Мы прячемся здесь': ['Me peidame end siin', 'We’re hiding here'],
+  'Посмотреть размещение →': ['Vaata majutust →', 'See the rooms →'],
   'Правила проживания →': ['Kodukord →', 'House rules →'],
   'Перейти к содержанию': ['Liigu sisu juurde', 'Skip to content'],
   'Или напишите:': ['Või kirjutage:', 'Or message us:'],
   'Просмотр фото': ['Foto vaatamine', 'Photo viewer'],
+  'Фотографии': ['Fotod', 'Photos'],
+  'Больше фотографий — на нашей странице': ['Rohkem fotosid leiate meie lehelt', 'More photos on our page'],
+  'Снаружи': ['Väljas', 'Outside'],
+  'Внутри': ['Sees', 'Inside'],
+  'Комнаты': ['Toad', 'Rooms'],
+  'Лес и рыбалка': ['Mets ja kalapüük', 'Forest & fishing'],
+  'Рыбалка на реке': ['Kalapüük jõel', 'Fishing on the river'],
+  'Лес рядом с домом': ['Mets maja lähedal', 'Forest near the house'],
+  'Утро у воды': ['Hommik vee ääres', 'Morning by the water'],
+  'Тропинка в лесу': ['Metsarada', 'Forest path'],
+  'Улов': ['Saak', 'The catch'],
+  'Река с берега': ['Jõgi kaldalt', 'The river from the bank'],
+  'Сосны у дома': ['Männid maja juures', 'Pines by the house'],
+  'Разделы галереи': ['Galerii jaotised', 'Gallery sections'],
+  'Кухня для гостей': ['Külaliste köök', 'Guest kitchen'],
+  'Обеденный зал': ['Söögisaal', 'Dining hall'],
+  'Душевые и туалеты': ['Dušid ja tualetid', 'Showers and toilets'],
+  'Комната на двоих': ['Tuba kahele', 'Double room'],
+  'Комната на троих': ['Tuba kolmele', 'Triple room'],
+  'Комната на четверых': ['Tuba neljale', 'Quadruple room'],
+  'Фото интерьера': ['Siseruumide foto', 'Interior photo'],
+  'Фото комнаты': ['Toa foto', 'Room photo'],
+  'Фото территории': ['Territooriumi foto', 'Grounds photo'],
   'Закрыть': ['Sulge', 'Close'],
   'Предыдущее фото': ['Eelmine foto', 'Previous photo'],
   'Следующее фото': ['Järgmine foto', 'Next photo'],
@@ -671,6 +799,15 @@ const ATTRS = ['aria-label', 'alt', 'title', 'placeholder'];
 class Component extends DCLogic {
   state = { lb: null, vidReady: false, lang: (() => { try { const v = localStorage.getItem('liidia-lang'); return LANGS.some((l) => l.code === v) ? v : 'et'; } catch (e) { return 'et'; } })(), w: typeof window !== 'undefined' ? window.innerWidth : 1280, menu: false, interest: null, open: {}, copyMsg: '', heroOut: false, contactsIn: false };
   heroCtaRef = React.createRef();
+  heroColRef = React.createRef();
+  measureHero = () => {
+    const col = this.heroColRef.current; if (!col) return;
+    const row = col.parentElement, h1c = row && row.firstElementChild, ph = row && row.nextElementSibling;
+    if (!h1c || !ph) return;
+    const wrapped = col.getBoundingClientRect().left < h1c.getBoundingClientRect().right;
+    const x = wrapped ? null : Math.round(col.getBoundingClientRect().left - ph.getBoundingClientRect().left);
+    if (x !== this.state.heroX) this.setState({ heroX: x });
+  };
   langRef = React.createRef();
   galRef = React.createRef();
   lbRef = React.createRef();
@@ -679,7 +816,8 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._prevState = { ...this.state };
-    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onResize = () => { this.setState({ w: window.innerWidth }); requestAnimationFrame(this.measureHero); };
+    setTimeout(this.measureHero, 60); if (document.fonts && document.fonts.ready) document.fonts.ready.then(this.measureHero);
     this.onKey = (e) => {
       if (this.state.lb) {
         if (e.key === 'Escape') this.closeLb();
@@ -704,7 +842,11 @@ class Component extends DCLogic {
     try { const q = new URLSearchParams(location.search).get('lang'); if (q && LANGS.some((l) => l.code === q) && q !== this.state.lang) this.setState({ lang: q }); } catch (e) {}
     this.vidIO = new IntersectionObserver((en) => { if (en.some((x) => x.isIntersecting)) { this.setState({ vidReady: true }); this.vidIO.disconnect(); } }, { rootMargin: '600px 0px' });
     setTimeout(() => { if (this.galRef.current) this.vidIO.observe(this.galRef.current); }, 0);
-    setTimeout(() => this.startDrift(), 400);
+    [400, 1500, 4000].forEach((t) => setTimeout(() => this.startDrift(), t));
+    this.driftResize = () => { clearTimeout(this.driftT); this.driftT = setTimeout(() => this.startDrift(), 300); };
+    window.addEventListener('resize', this.driftResize);
+    this.fixSlotTouch = () => document.querySelectorAll('image-slot').forEach((el) => { const r = el.shadowRoot; if (r && !r.querySelector('style[data-touch]')) { const st = document.createElement('style'); st.setAttribute('data-touch', ''); st.textContent = '.frame img,.frame,:host{touch-action:pan-x pan-y pinch-zoom!important}'; r.appendChild(st); } });
+    [100, 600, 1500, 3000].forEach((t) => setTimeout(this.fixSlotTouch, t));
     this.textMap = new WeakMap();
     this.attrMap = new WeakMap();
     this.mo = new MutationObserver(() => { cancelAnimationFrame(this.trRaf); this.trRaf = requestAnimationFrame(() => this.translateDom()); });
@@ -724,6 +866,7 @@ class Component extends DCLogic {
     this.mo && this.mo.disconnect();
     this.vidIO && this.vidIO.disconnect();
     (this.drifts || []).forEach((a) => a.cancel());
+    window.removeEventListener('resize', this.driftResize);
     document.body.style.overflow = '';
     cancelAnimationFrame(this.trRaf);
     clearTimeout(this.copyT);
@@ -734,8 +877,8 @@ class Component extends DCLogic {
     const ease = 'cubic-bezier(.2,.7,.2,1)';
     const show = (el) => {
       el.style.opacity = '1';
-      el.style.transform = 'none';
-      setTimeout(() => { el.style.transition = ''; el.style.willChange = ''; }, 1400);
+      el.style.transform = el.__rv ? (el.__rv.transform || 'none') : 'none';
+      setTimeout(() => { const o = el.__rv || {}; el.style.transition = o.transition || ''; el.style.transform = o.transform || ''; el.style.opacity = o.opacity || ''; el.style.willChange = o.willChange || ''; }, 1400);
     };
     this.revealIO = new IntersectionObserver((entries) => {
       entries.forEach((en) => { if (en.isIntersecting) { show(en.target); this.revealIO.unobserve(en.target); } });
@@ -748,6 +891,7 @@ class Component extends DCLogic {
         const seen = new Set();
         items.filter((el) => { for (const s of seen) if (s.contains(el)) return false; seen.add(el); return true; })
           .slice(0, 14).forEach((el, i) => {
+            el.__rv = { transition: el.style.transition, transform: el.style.transform, opacity: el.style.opacity, willChange: el.style.willChange };
             el.style.opacity = '0';
             el.style.transform = 'translateY(16px)';
             el.style.willChange = 'opacity, transform';
@@ -766,7 +910,10 @@ class Component extends DCLogic {
   }
 
   _didUpdate(pp, ps) {
-    if (this.state.lb && this.lbRef.current) { const im = this.lbRef.current.querySelector('img'); const it = this.state.lb.items[this.state.lb.i]; if (im && im.getAttribute('src') !== it.src) { im.src = it.src; im.alt = it.alt; } }
+    if (this.fixSlotTouch && ps.galTab !== this.state.galTab) setTimeout(this.fixSlotTouch, 50);
+    if (this.fixSlotTouch && ps.w !== this.state.w) setTimeout(this.fixSlotTouch, 50);
+    if (this.state.lb) requestAnimationFrame(() => { if (!this.state.lb || !this.lbRef.current) return; const im = this.lbRef.current.querySelector('img'); const it = this.state.lb.items[this.state.lb.i]; if (im && it && im.getAttribute('src') !== it.src) { im.src = it.src; im.alt = it.alt; } });
+    if (false) { const im = this.lbRef.current.querySelector('img'); const it = this.state.lb.items[this.state.lb.i]; if (im && im.getAttribute('src') !== it.src) { im.src = it.src; im.alt = it.alt; } }
     if (ps.lang !== this.state.lang) this.translateDom();
     if (!ps.lb && this.state.lb) {
       document.body.style.overflow = 'hidden';
@@ -786,20 +933,39 @@ class Component extends DCLogic {
 
   startDrift() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    this.drifts = [];
+    this.drifts = this.drifts || []; this.driftSeen = this.driftSeen || new WeakSet();
     document.querySelectorAll('[style*="liidia-pattern"]').forEach((el) => {
-      if (!el.animate) return;
+      if (!el.animate || this.driftSeen.has(el)) return;
       const vertical = (el.getAttribute('style') || '').indexOf('sand-v') >= 0;
-      const cs = getComputedStyle(el);
-      const size = vertical ? (parseFloat(cs.width) || 140) : (parseFloat(cs.height) || 140);
+      const r = el.getBoundingClientRect();
+      const size = vertical ? r.width : r.height;
+      if (!size) return;
       const tile = Math.round(size * 433 / 520);
       const prop = vertical ? 'backgroundPositionY' : 'backgroundPositionX';
-      const base = vertical ? '' : '';
-      this.drifts.push(el.animate([{ [prop]: '0px' }, { [prop]: (vertical ? tile : -tile) + 'px' }], { duration: 70000, iterations: Infinity, easing: 'linear' }));
+      this.driftSeen.add(el);
+      this.drifts.push(el.animate([{ [prop]: '0px' }, { [prop]: (vertical ? tile : -tile) + 'px' }], { duration: 45000, iterations: Infinity, easing: 'linear' }));
     });
   }
 
+  galNoDrag = (e) => e.preventDefault();
+  galDragStart = (e) => {
+    if (e.button !== 0 || this.state.w >= 720) return;
+    const el = e.currentTarget; const x0 = e.clientX, s0 = el.scrollLeft; let moved = false;
+    el.style.scrollSnapType = 'none'; el.style.cursor = 'grabbing';
+    const mv = (ev) => { const dx = ev.clientX - x0; if (Math.abs(dx) > 5) moved = true; el.scrollLeft = s0 - dx; };
+    const up = () => {
+      window.removeEventListener('mousemove', mv); window.removeEventListener('mouseup', up);
+      el.style.cursor = 'grab';
+      if (moved) { this.galDragged = true; setTimeout(() => { this.galDragged = false; }, 50); }
+      const pl = parseFloat(getComputedStyle(el).paddingLeft) || 0;
+      let best = 0, bd = Infinity; Array.from(el.children).forEach((k) => { const d = Math.abs(k.offsetLeft - pl - el.scrollLeft); if (d < bd) { bd = d; best = k.offsetLeft - pl; } });
+      el.scrollTo({ left: best, behavior: 'smooth' });
+      setTimeout(() => { el.style.scrollSnapType = 'x mandatory'; }, 450);
+    };
+    window.addEventListener('mousemove', mv); window.addEventListener('mouseup', up);
+  };
   openLb = (e) => {
+    if (this.galDragged) return;
     const slot = e.target && e.target.closest && e.target.closest('image-slot');
     if (!slot) return;
     const slots = Array.from(document.querySelectorAll('#gallery image-slot'));
@@ -893,6 +1059,7 @@ class Component extends DCLogic {
     if (it && it.type === 'group') { interestText = L.group[0]; interestHint = L.group[1]; }
     const barVisible = isMobile && s.heroOut && !s.contactsIn && !s.menu;
     return {
+      heroCircL: s.heroX != null ? s.heroX + 'px' : '16px', heroCircR: 'auto',
       isMobile, isDesktop: !isMobile, footNavMl: isMobile ? '0' : 'auto', vidMinH: s.w < 720 ? '0px' : '320px', vidAR: s.w < 720 ? '16 / 9' : 'auto', galRowDisplay: s.w < 720 ? 'contents' : 'flex', heroPatDesk: isMobile ? 'none' : 'block', amenCols: s.w < 720 ? 'minmax(0,1fr)' : s.w < 1024 ? 'repeat(2,minmax(0,1fr))' : 'repeat(3,minmax(0,1fr))', saunaPatLeft: s.w < 1000 ? 'calc(50% - clamp(55px,5.5vw,85px))' : 'calc(clamp(20px,4vw,48px) + (100% - 2 * clamp(20px,4vw,48px) - clamp(480px,38vw,680px) - clamp(32px,6vw,96px)) / 2 - clamp(55px,5.5vw,85px))', roomsHeadCols: s.w < 900 ? 'minmax(0,1fr)' : 'minmax(0,2fr) minmax(0,1fr)', heroPatMob: isMobile ? 'block' : 'none',
       hdrCtaMax: s.heroOut ? '1fr' : '0fr', hdrCtaMl: s.heroOut ? '0px' : '-24px',
       hdrCtaOpacity: s.heroOut ? 1 : 0, hdrCtaShift: s.heroOut ? 'none' : 'translateX(16px)',
@@ -922,9 +1089,17 @@ class Component extends DCLogic {
           toggle: () => this.setState((p) => ({ open: { ...p.open, [i]: !p.open[i] } })) };
       }),
       copyPhone: this.copyPhone, copyMsg: s.copyMsg,
-      barVisible, barPad: isMobile ? '72px' : '0px',
+      barVisible, barPad: isMobile ? '24px' : '0px',
+      footPt: isMobile ? '44px' : '56px', galDragStart: this.galDragStart, galNoDrag: this.galNoDrag, galMobile: s.w < 720, galDesk: s.w >= 720,
+      galTabs: ['Снаружи', 'Внутри', 'Комнаты', 'Лес и рыбалка'].map((label, i) => { const on = (s.galTab || 0) === i; return { label, sel: on ? 'true' : 'false', bg: on ? '#284B3C' : (s.w < 720 ? '#fff' : 'transparent'), bd: s.w < 720 ? (on ? '1px solid #284B3C' : '1px solid #D4D8CE') : '0', fg: on ? '#fff' : '#222B25', pick: () => this.setState({ galTab: i }) }; }),
+      galT0: (s.galTab || 0) === 0, galT1: s.galTab === 1, galT2: s.galTab === 2, galT3: s.galTab === 3,
+      gDisp: s.w < 720 ? 'flex' : 'grid', tabsW: s.w < 720 ? '100%' : 'max-content', tabsDisp: s.w < 720 ? 'grid' : 'flex', tabsR: s.w < 720 ? '0' : '999px', tabR: s.w < 720 ? '10px' : '999px', tabsGap: s.w < 720 ? '8px' : '4px', tabsPad: s.w < 720 ? '0' : '4px', tabsBd: s.w < 720 ? '0' : '1px solid #D4D8CE', tabsBg: s.w < 720 ? 'transparent' : '#fff', tabFlex: s.w < 720 ? '1 1 0' : '0 0 auto', gCols: s.w < 1100 ? 4 : 5, gGap: s.w < 720 ? '12px' : '12px', gOvf: s.w < 720 ? 'auto' : 'visible', gSnap: s.w < 720 ? 'x mandatory' : 'none',
+      gMargin: s.w < 720 ? '0 calc(-1 * clamp(20px,4vw,48px))' : '0', gPad: s.w < 720 ? '0 clamp(20px,4vw,48px) 4px' : '0', gScrollPad: s.w < 720 ? '0 clamp(20px,4vw,48px)' : '0', gCursor: s.w < 720 ? 'grab' : 'auto',
+      featCol: s.w < 720 ? 'auto' : 'span 2', featRow: s.w < 720 ? 'auto' : (s.w < 1100 ? 'span 1' : 'span 2'), featAR: s.w < 720 ? '4 / 3' : 'auto', itemFlex: s.w < 720 ? '0 0 80%' : '0 1 auto',
+      factCols: s.w < 720 ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))', fPadR: s.w < 720 ? '16px' : '24px', fBorderB: s.w < 720 ? '1px solid #D4D8CE' : '0', f3pl: s.w < 720 ? '0' : '24px', f3bl: s.w < 720 ? '0' : '1px solid #D4D8CE',
       year: new Date().getFullYear(), rulesHref: 'house-rules.html?lang=' + s.lang,
       galRef: this.galRef, lbRef: this.lbRef, lbCloseRef: this.lbCloseRef, openLb: this.openLb, vidReady: s.vidReady,
+      lbImg: s.lb ? React.createElement('img', { key: 'lb' + s.lb.i, src: s.lb.items[s.lb.i].src, alt: s.lb.items[s.lb.i].alt, style: { display: 'block', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', borderRadius: 8, boxShadow: '0 24px 64px rgba(0,0,0,.45)' } }) : null,
       lbOpen: !!s.lb, lbSrc: s.lb ? s.lb.items[s.lb.i].src : '', lbAlt: s.lb ? s.lb.items[s.lb.i].alt : '',
       lbCount: s.lb ? (s.lb.i + 1) + ' / ' + s.lb.items.length : '',
       lbClose: this.closeLb, lbPrev: () => this.stepLb(-1), lbNext: () => this.stepLb(1),
