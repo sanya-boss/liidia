@@ -42,6 +42,8 @@ body{margin:0;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,san
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 a,button,[role="button"],summary{-webkit-touch-callout:none;touch-action:manipulation}
 button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
+/* Hide the design-tool placeholder ring: the DC runtime strips image-slot's data-filled flag, so the ring stays visible over loaded photos. */
+image-slot::part(ring){display:none}
 a{color:#284B3C}
 a:hover{color:#1B3529}
 :focus-visible{outline:2px solid #284B3C;outline-offset:3px}
