@@ -32,9 +32,22 @@
 <link rel="alternate" hreflang="x-default" href="?lang=et">
 <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Liidia", "description": "Guest house on the Rannapungerja river near Lake Peipus. Rooms for 2–4 guests, up to 40 beds, sauna with hot tub.", "telephone": "+372 5815 2876", "priceRange": "55–85 €", "image": ["assets/og-cover.jpg", "assets/liidia-hero.webp"], "sameAs": ["https://www.facebook.com/p/Peipsi-resting-place-Liidia-Ltd-100083404779288/"],  "address": { "@type": "PostalAddress", "addressLocality": "Rannapungerja", "postalCode": "42208", "addressRegion": "Ida-Virumaa", "addressCountry": "EE" }, "amenityFeature": [ { "@type": "LocationFeatureSpecification", "name": "Sauna", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Shared kitchen", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Barbecue area", "value": true }, { "@type": "LocationFeatureSpecification", "name": "Playground", "value": true } ] }</script>
 <meta property="og:description" content="Гостевой дом в Раннапунгерья: отдых на природе, размещение для семей и компаний, баня и купель.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Self-hosted Lora + Manrope (see vendor/fonts/fonts.css): no round trip to
+     Google Fonts, and font-display:optional + these preloads for the
+     above-the-fold weights stop the flash of a fallback font on first paint. -->
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-500-normal-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-500-normal-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-500-normal-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-400-italic-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-400-italic-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-400-italic-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-400-normal-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-400-normal-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-400-normal-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-600-normal-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-600-normal-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-600-normal-cyrillic.woff2">
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
 <script src="./image-slot.js"></script>
 <style>
 html{scroll-behavior:smooth;scroll-padding-top:96px}

@@ -14,9 +14,22 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="theme-color" content="#284B3C">
 <meta name="format-detection" content="telephone=no">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<!-- Self-hosted Lora + Manrope (see vendor/fonts/fonts.css): no round trip to
+     Google Fonts, and font-display:optional + these preloads for the
+     above-the-fold weights stop the flash of a fallback font on first paint. -->
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-500-normal-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-500-normal-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-500-normal-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-400-italic-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-400-italic-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/lora-400-italic-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-400-normal-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-400-normal-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-400-normal-cyrillic.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-600-normal-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-600-normal-latin-ext.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="vendor/fonts/manrope-600-normal-cyrillic.woff2">
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
 <style>
 body{margin:0;background:#F6F3EC;color:#222B25;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
